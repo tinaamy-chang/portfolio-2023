@@ -5,8 +5,8 @@ const {} = Astro.props;
 ---
 
 <div class="nav-arrow-wrapper">
-  <div class="nav-arrow"><a>BACK</a></div>
-  <div class="nav-arrow"><a>NEXT</a></div>
+  <div class="nav-arrow"><a id="back-arrow" href="#back">BACK</a></div>
+  <div class="nav-arrow"><a id="next-arrow" href="next">NEXT</a></div>
 </div>
 
 <style>
@@ -27,6 +27,69 @@ const {} = Astro.props;
     text-orientation: upright;
     writing-mode: vertical-rl;
   }
+
+  .hide {
+    display: none;
+  }
 </style>
 
-<script></script>
+<script>
+  const home = document.getElementById("home");
+  const productatcurant = document.getElementById("productatcurant");
+  const paymentforms = document.getElementById("paymentforms");
+  const widgetlibrary = document.getElementById("widgetlibrary");
+  const cats = document.getElementById("cats");
+  const contact = document.getElementById("contact");
+
+  const callbackRouter: IntersectionObserverCallback = (entries, _observer) => {
+    let entry = entries[0];
+    let target = entry.target;
+
+    let nextArrow = document.getElementById("next-arrow") as
+      | HTMLLinkElement
+      | undefined
+      | null;
+
+    const backArrowWrapper = document.querySelector("#back-arrow");
+    const nextArrowWrapper = document.querySelector("#next-arrow");
+
+    if (entry.intersectionRatio > 0) {
+      console.log(target.id + " is in view!");
+      if (target.id === "home") {
+        console.log("home section");
+        backArrowWrapper?.classList.add("hide");
+        nextArrow?.setAttribute("href", "#productatcurant");
+      } else if (target.id === "paymentforms") {
+        backArrowWrapper?.classList.remove("hide");
+        nextArrowWrapper?.classList.remove("hide");
+        console.log("paymentforms section");
+      } else if (target.id === "widgetlibrary") {
+        backArrowWrapper?.classList.remove("hide");
+        nextArrowWrapper?.classList.remove("hide");
+
+        console.log("widgetlibrarysection");
+      } else if (target.id === "cats") {
+        backArrowWrapper?.classList.remove("hide");
+        nextArrowWrapper?.classList.remove("hide");
+
+        console.log("cats section");
+      } else if (target.id === "contact") {
+        nextArrowWrapper?.classList.add("hide");
+        console.log("contact section");
+      }
+    }
+  };
+
+  // function catsInView(target) {
+  //   console.log("ok");
+  // }
+
+  const observer = new IntersectionObserver(callbackRouter);
+  const sections = document.querySelectorAll(".in-view");
+  sections.forEach(observer.observe.bind(observer));
+
+  // const observer = new IntersectionObserver((entries) => {
+  //   console.log(entries);
+  // });
+  // observer.observe(document.getElementById("productatcurant")!);
+</script>

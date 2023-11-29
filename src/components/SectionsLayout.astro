@@ -12,22 +12,34 @@ import Contact from "../components/Contact.astro";
 ---
 
 <div class="section-wrapper">
-  <div id="home">
+  <div id="home" class="in-view" data-callback="homeInView">
     <Home />
   </div>
-  <div class="project-layout" id="productatcurant">
+  <div
+    class="in-view project-layout"
+    id="productatcurant"
+    data-callback="productatcurantInView"
+  >
     <Curant />
   </div>
-  <div class="project-layout" id="paymentforms">
+  <div
+    class="in-view project-layout"
+    id="paymentforms"
+    data-callback="paymentformsInView"
+  >
     <PaymentForms />
   </div>
-  <div class="project-layout" id="cats">
-    <Cats />
-  </div>
-  <div class="project-layout" id="widgetlibrary">
+  <div
+    class="in-view project-layout"
+    id="widgetlibrary"
+    data-callback="widgetlibraryInView"
+  >
     <WidgetLibrary />
   </div>
-  <div id="contact">
+  <div class="in-view project-layout" id="cats" data-callback="catsInView">
+    <Cats />
+  </div>
+  <div id="contact" class="in-view" data-callback="">
     <Contact />
   </div>
 </div>
