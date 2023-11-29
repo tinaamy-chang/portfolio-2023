@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+import NavigationArrows from "../components/NavigationArrows.astro";
+import SectionsLayout from "../components/SectionsLayout.astro";
+---
+
+<Layout title="Tina Chang | Portfolio">
+  <div class="wrapper">
+    <Navigation />
+    <SectionsLayout />
+  </div>
+  <NavigationArrows />
+</Layout>
+
+<style>
+  .wrapper {
+    width: 100%;
+    max-width: 1600px;
+    background-color: blue;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+  }
+</style>

@@ -1,0 +1,44 @@
+---
+interface Props {}
+
+const {} = Astro.props;
+---
+
+<div class="about-layout">
+  <div class="about-wrapper">
+    <h1 class="about-header">Contact Me 🐟</h1>
+
+    <h2 class="about-info">
+      Archive | Resume | LinkedIn | GitHub | Projects v
+    </h2>
+  </div>
+</div>
+
+<style>
+  .about-layout {
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    background-color: palegoldenrod;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+  }
+
+  .about-wrapper {
+    background-color: green;
+    width: 80%;
+  }
+  .about-img {
+    border-radius: 100px;
+  }
+  .about-header {
+    font-size: 2.5em;
+  }
+
+  .about-info {
+    font-size: 1.2em;
+    margin-bottom: 12px;
+  }
+</style>

@@ -1,0 +1,47 @@
+---
+interface Props {}
+
+const {} = Astro.props;
+
+import Home from "../components/Home.astro";
+import Curant from "../components/Curant.astro";
+import PaymentForms from "../components/PaymentForms.astro";
+import Cats from "../components/Cats.astro";
+import WidgetLibrary from "../components/WidgetLibrary.astro";
+import Contact from "../components/Contact.astro";
+---
+
+<div class="section-wrapper">
+  <div id="home">
+    <Home />
+  </div>
+  <div class="project-layout" id="productatcurant">
+    <Curant />
+  </div>
+  <div class="project-layout" id="paymentforms">
+    <PaymentForms />
+  </div>
+  <div class="project-layout" id="cats">
+    <Cats />
+  </div>
+  <div class="project-layout" id="widgetlibrary">
+    <WidgetLibrary />
+  </div>
+  <div id="contact">
+    <Contact />
+  </div>
+</div>
+
+<style>
+  .section-wrapper {
+    background-color: yellow;
+  }
+
+  .project-layout {
+    width: 100%;
+    background-color: yellowgreen;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 80px;
+  }
+</style>

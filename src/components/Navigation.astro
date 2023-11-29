@@ -1,0 +1,180 @@
+---
+interface Props {}
+
+const {} = Astro.props;
+---
+
+<>
+  <div class="nav-wrapper first-load show">
+    <div class="nav-items-wrapper">
+      <div class="nav-items">
+        <img class="nav-img" src="https://placehold.co/50" />
+      </div>
+      <div class="nav-items">
+        Tina Chang
+        <br />
+         Product/UI/UX
+      </div>
+      <div class="nav-items">Resume | LinkedIn</div>
+      <div class="nav-items">
+        This website was coded using Astro. Check out my code!
+      </div>
+    </div>
+    <div class="nav-items-wrapper">
+      <a href="#home" class="nav-items nav-anchor active-item">Home</a>
+      <a href="#productatcurant" class="nav-items nav-anchor"
+        >Product/UI/UX @ Curant</a
+      >
+      <a href="#paymentforms" class="nav-items nav-anchor">Payment Forms</a>
+      <a href="#cats" class="nav-items nav-anchor">Cats</a>
+      <a href="#widgetlibrary" class="nav-items nav-anchor">Widget Library</a>
+      <a href="#contact" class="nav-items nav-anchor">Contact</a>
+    </div>
+  </div>
+  <div class="nav-collapse">«</div>
+</>
+
+<style>
+  .nav-wrapper {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+  }
+
+  .show {
+    min-width: 200px;
+    transition: max-width 0.25s ease-in-out;
+    transition: min-width 0.25s ease-in-out;
+  }
+
+  .first-load {
+    @media only screen and (max-width: 600px) {
+      min-width: 0px;
+      max-width: 0px;
+    }
+  }
+
+  .hide {
+    min-width: 0px;
+    max-width: 0px;
+    transition: max-width 0.25s ease-in-out;
+    transition: min-width 0.25s ease-in-out;
+  }
+
+  .nav-collapse {
+    min-width: 24px;
+    background-color: blue;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    transition: background-color 0.25s ease-in-out;
+
+    &:hover {
+      background-color: plum;
+      transition: background-color 0.25s ease-in-out;
+      cursor: pointer;
+    }
+  }
+
+  .nav-wrapper::before,
+  .nav-wrapper::after {
+    content: "";
+    margin: auto;
+  }
+
+  .nav-items-wrapper {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-items {
+    min-width: 200px;
+    background-color: green;
+    padding: 4px;
+  }
+
+  .nav-anchor {
+    &:hover {
+      background-color: lightcoral;
+    }
+  }
+
+  .active-item {
+    background-color: pink;
+  }
+
+  .nav-image {
+    border-radius: 100px;
+  }
+</style>
+
+<script>
+  const navtoggle = document.querySelector(
+    ".nav-collapse"
+  ) as HTMLElement | null;
+  const navwrapper = document.querySelector(
+    ".nav-wrapper"
+  ) as HTMLElement | null;
+
+  if (navwrapper) {
+    navtoggle?.addEventListener("click", () => {
+      if (navwrapper?.classList.contains("show")) {
+        navwrapper?.classList.remove("first-load");
+        navwrapper?.classList.add("hide");
+        navwrapper?.classList.remove("show");
+        navtoggle.innerHTML = "»";
+      } else {
+        navwrapper?.classList.remove("first-load");
+        navwrapper?.classList.add("show");
+        navwrapper?.classList.remove("hide");
+        navtoggle.innerHTML = "«";
+      }
+    });
+  }
+
+  if (navtoggle) {
+    const win = window;
+    window.addEventListener("load", () => {
+      const win = window.innerWidth;
+      if (win < 600) {
+        navwrapper?.classList.add("hide");
+        navwrapper?.classList.remove("show");
+        navtoggle.innerHTML = "»";
+      }
+    });
+
+    let oldWindowWidth = win.innerWidth;
+
+    win.addEventListener("resize", () => {
+      let newWindowWidth = win.innerWidth;
+      if (newWindowWidth > oldWindowWidth && newWindowWidth < 600) {
+      } else if (newWindowWidth < oldWindowWidth && newWindowWidth > 600) {
+        console.log("descreased");
+        navwrapper?.classList.add("hide");
+        navwrapper?.classList.remove("first-load");
+        navwrapper?.classList.remove("show");
+        navtoggle.innerHTML = "»";
+      }
+
+      // update the old width
+      oldWindowWidth = newWindowWidth;
+    });
+  }
+
+  const navitems = document.querySelectorAll(".nav-items.nav-anchor");
+
+  navitems.forEach((i) => {
+    i.addEventListener("click", function (e) {
+      document
+        .querySelector(".nav-items-wrapper a.active-item")
+        ?.classList.remove("active-item");
+      (e.target as Element).classList.add("active-item");
+    });
+  });
+</script>

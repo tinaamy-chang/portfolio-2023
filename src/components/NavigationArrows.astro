@@ -1,0 +1,32 @@
+---
+interface Props {}
+
+const {} = Astro.props;
+---
+
+<div class="nav-arrow-wrapper">
+  <div class="nav-arrow"><a>BACK</a></div>
+  <div class="nav-arrow"><a>NEXT</a></div>
+</div>
+
+<style>
+  .nav-arrow-wrapper {
+    position: fixed;
+    top: 0;
+    right: 20px;
+    height: 100%;
+    background-color: purple;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .nav-arrow {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    text-orientation: upright;
+    writing-mode: vertical-rl;
+  }
+</style>
+
+<script></script>

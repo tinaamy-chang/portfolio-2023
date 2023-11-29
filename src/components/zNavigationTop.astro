@@ -1,0 +1,38 @@
+---
+interface Props {}
+
+const {} = Astro.props;
+---
+
+<div class="nav-wrapper">
+  <div class="nav-item-wrapper">
+    <div class="nav-item">Tina Amy Chang</div>
+  </div>
+  <div class="nav-item-wrapper">
+    <div class="nav-item">Resume</div>
+    <div class="nav-item">LinkedIn</div>
+    <div class="nav-item">Coded in Astro</div>
+  </div>
+</div>
+
+<style>
+  .nav-wrapper {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: green;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 1em;
+    position: sticky;
+    top: 0;
+  }
+  .nav-item-wrapper {
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+  }
+  .nav-item {
+    background-color: yellow;
+  }
+</style>

@@ -1,0 +1,58 @@
+---
+interface Props {}
+
+const {} = Astro.props;
+---
+
+<div class="about-layout">
+  <div class="about-wrapper">
+    <img class="about-img" src="https://placehold.co/200" />
+    <h1 class="about-header">Hello, I am Tina. 🐟</h1>
+    <h2 class="about-info">
+      I've been told I'm a "full-stack designer". I have lead marketing and
+      product design for startups.
+    </h2>
+    <h2 class="about-info">
+      Product Research / Design (ui-ux-visual-graphic) / Frontend Development
+      with a dash of Project Management.
+    </h2>
+    <h2 class="about-info">
+      📍 Bay Area, CA
+      <br />
+       🖥️ Product/UI/UX @ Curant
+    </h2>
+
+    <h2 class="about-info">
+      Archive | Resume | LinkedIn | GitHub | Projects v
+    </h2>
+  </div>
+</div>
+
+<style>
+  .about-layout {
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    background-color: palegoldenrod;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+  }
+
+  .about-wrapper {
+    background-color: green;
+    width: 80%;
+  }
+  .about-img {
+    border-radius: 100px;
+  }
+  .about-header {
+    font-size: 2.5em;
+  }
+
+  .about-info {
+    font-size: 1.2em;
+    margin-bottom: 12px;
+  }
+</style>
