@@ -31,16 +31,13 @@ const {} = Astro.props;
   .hide {
     display: none;
   }
+
+  .active-item {
+    background-color: pink;
+  }
 </style>
 
 <script>
-  const home = document.getElementById("home");
-  const productatcurant = document.getElementById("productatcurant");
-  const paymentforms = document.getElementById("paymentforms");
-  const widgetlibrary = document.getElementById("widgetlibrary");
-  const cats = document.getElementById("cats");
-  const contact = document.getElementById("contact");
-
   const callbackRouter: IntersectionObserverCallback = (entries, _observer) => {
     let entry = entries[0];
     let target = entry.target;
@@ -50,46 +47,79 @@ const {} = Astro.props;
       | undefined
       | null;
 
+    let backArrow = document.getElementById("back-arrow") as
+      | HTMLLinkElement
+      | undefined
+      | null;
+
     const backArrowWrapper = document.querySelector("#back-arrow");
     const nextArrowWrapper = document.querySelector("#next-arrow");
 
-    if (entry.intersectionRatio > 0) {
+    const navitems = document.querySelectorAll(".nav-items.nav-anchor");
+
+    if (entry.isIntersecting) {
       console.log(target.id + " is in view!");
+      navitems.forEach((i) => {
+        document
+          .querySelector(".nav-items-wrapper a.active-item")
+          ?.classList.remove("active-item");
+      });
       if (target.id === "home") {
         console.log("home section");
         backArrowWrapper?.classList.add("hide");
         nextArrow?.setAttribute("href", "#productatcurant");
+        document.querySelector("#nav-item-home")?.classList.add("active-item");
+      } else if (target.id === "productatcurant") {
+        backArrowWrapper?.classList.remove("hide");
+        nextArrowWrapper?.classList.remove("hide");
+        console.log("productatcurant section");
+        backArrow?.setAttribute("href", "#home");
+        nextArrow?.setAttribute("href", "#paymentforms");
+        document
+          .querySelector("#nav-item-productatcurant")
+          ?.classList.add("active-item");
       } else if (target.id === "paymentforms") {
         backArrowWrapper?.classList.remove("hide");
         nextArrowWrapper?.classList.remove("hide");
         console.log("paymentforms section");
+        backArrow?.setAttribute("href", "#productatcurant");
+        nextArrow?.setAttribute("href", "#widgetlibrary");
+        document
+          .querySelector("#nav-item-paymentforms")
+          ?.classList.add("active-item");
       } else if (target.id === "widgetlibrary") {
         backArrowWrapper?.classList.remove("hide");
         nextArrowWrapper?.classList.remove("hide");
-
+        backArrow?.setAttribute("href", "#paymentforms");
+        nextArrow?.setAttribute("href", "#cats");
         console.log("widgetlibrarysection");
+        document
+          .querySelector("#nav-item-widgetlibrary")
+          ?.classList.add("active-item");
       } else if (target.id === "cats") {
         backArrowWrapper?.classList.remove("hide");
         nextArrowWrapper?.classList.remove("hide");
-
+        backArrow?.setAttribute("href", "#widgetlibrary");
+        nextArrow?.setAttribute("href", "#contact");
         console.log("cats section");
+        document.querySelector("#nav-item-cats")?.classList.add("active-item");
       } else if (target.id === "contact") {
         nextArrowWrapper?.classList.add("hide");
+        backArrow?.setAttribute("href", "#cats");
         console.log("contact section");
+        document
+          .querySelector("#nav-item-contact")
+          ?.classList.add("active-item");
+      } else {
+        nextArrowWrapper?.classList.add("hide");
+        backArrowWrapper?.classList.add("hide");
       }
     }
   };
 
-  // function catsInView(target) {
-  //   console.log("ok");
-  // }
-
-  const observer = new IntersectionObserver(callbackRouter);
+  const observer = new IntersectionObserver(callbackRouter, {
+    threshold: 0.2,
+  });
   const sections = document.querySelectorAll(".in-view");
   sections.forEach(observer.observe.bind(observer));
-
-  // const observer = new IntersectionObserver((entries) => {
-  //   console.log(entries);
-  // });
-  // observer.observe(document.getElementById("productatcurant")!);
 </script>

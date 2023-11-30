@@ -12,48 +12,34 @@ import Contact from "../components/Contact.astro";
 ---
 
 <div class="section-wrapper">
-  <div id="home" class="in-view" data-callback="homeInView">
+  <div id="home" class="in-view">
     <Home />
   </div>
-  <div
-    class="in-view project-layout"
-    id="productatcurant"
-    data-callback="productatcurantInView"
-  >
+  <div class="in-view project-layout" id="productatcurant">
     <Curant />
   </div>
-  <div
-    class="in-view project-layout"
-    id="paymentforms"
-    data-callback="paymentformsInView"
-  >
+  <div class="in-view project-layout" id="paymentforms">
     <PaymentForms />
   </div>
-  <div
-    class="in-view project-layout"
-    id="widgetlibrary"
-    data-callback="widgetlibraryInView"
-  >
+  <div class="in-view project-layout" id="widgetlibrary">
     <WidgetLibrary />
   </div>
-  <div class="in-view project-layout" id="cats" data-callback="catsInView">
-    <Cats />
-  </div>
-  <div id="contact" class="in-view" data-callback="">
+  <div class="in-view project-layout" id="cats"><Cats /></div>
+  <div id="contact" class="in-view">
     <Contact />
   </div>
+
+  <style>
+    .section-wrapper {
+      background-color: yellow;
+    }
+
+    .project-layout {
+      width: 100%;
+      background-color: yellowgreen;
+      display: flex;
+      flex-direction: column;
+      padding: 40px 80px;
+    }
+  </style>
 </div>
-
-<style>
-  .section-wrapper {
-    background-color: yellow;
-  }
-
-  .project-layout {
-    width: 100%;
-    background-color: yellowgreen;
-    display: flex;
-    flex-direction: column;
-    padding: 40px 80px;
-  }
-</style>

@@ -21,14 +21,30 @@ const {} = Astro.props;
       </div>
     </div>
     <div class="nav-items-wrapper">
-      <a href="#home" class="nav-items nav-anchor active-item">Home</a>
-      <a href="#productatcurant" class="nav-items nav-anchor"
-        >Product/UI/UX @ Curant</a
+      <a
+        id="nav-item-home"
+        href="#home"
+        class="nav-items nav-anchor active-item">Home</a
       >
-      <a href="#paymentforms" class="nav-items nav-anchor">Payment Forms</a>
-      <a href="#widgetlibrary" class="nav-items nav-anchor">Widget Library</a>
-      <a href="#cats" class="nav-items nav-anchor">Cats</a>
-      <a href="#contact" class="nav-items nav-anchor">Contact</a>
+      <a
+        id="nav-item-productatcurant"
+        href="#productatcurant"
+        class="nav-items nav-anchor">Product/UI/UX @ Curant</a
+      >
+      <a
+        id="nav-item-paymentforms"
+        href="#paymentforms"
+        class="nav-items nav-anchor">Payment Forms</a
+      >
+      <a
+        id="nav-item-widgetlibrary"
+        href="#widgetlibrary"
+        class="nav-items nav-anchor">Widget Library</a
+      >
+      <a id="nav-item-cats" href="#cats" class="nav-items nav-anchor">Cats</a>
+      <a id="nav-item-contact" href="#contact" class="nav-items nav-anchor"
+        >Contact</a
+      >
     </div>
   </div>
   <div class="nav-collapse">«</div>
@@ -167,14 +183,14 @@ const {} = Astro.props;
     });
   }
 
-  const navitems = document.querySelectorAll(".nav-items.nav-anchor");
+  // const navitems = document.querySelectorAll(".nav-items.nav-anchor");
 
-  navitems.forEach((i) => {
-    i.addEventListener("click", function (e) {
-      document
-        .querySelector(".nav-items-wrapper a.active-item")
-        ?.classList.remove("active-item");
-      (e.target as Element).classList.add("active-item");
-    });
-  });
+  // navitems.forEach((i) => {
+  //   i.addEventListener("click", function (e) {
+  //     document
+  //       .querySelector(".nav-items-wrapper a.active-item")
+  //       ?.classList.remove("active-item");
+  //     (e.target as Element).classList.add("active-item");
+  //   });
+  // });
 </script>
