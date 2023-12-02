@@ -38,6 +38,10 @@ const {} = Astro.props;
     display: flex;
     flex-direction: column;
     padding: 80px;
+
+    @media only screen and (max-width: 600px) {
+      height: 100%;
+    }
   }
 
   .about-wrapper {

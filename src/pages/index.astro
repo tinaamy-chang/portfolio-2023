@@ -6,7 +6,7 @@ import SectionsLayout from "../components/SectionsLayout.astro";
 ---
 
 <Layout title="Tina Chang | Portfolio">
-  <div class="wrapper">
+  <div id="wrapper">
     <Navigation />
     <SectionsLayout />
   </div>
@@ -14,13 +14,17 @@ import SectionsLayout from "../components/SectionsLayout.astro";
 </Layout>
 
 <style>
-  .wrapper {
+  #wrapper {
     width: 100%;
     max-width: 1600px;
+    overflow: hidden;
     background-color: blue;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
     margin: auto;
+    height: 100vh;
+    @media only screen and (max-width: 600px) {
+    }
   }
 </style>

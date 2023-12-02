@@ -6,7 +6,7 @@ const {} = Astro.props;
 
 <div class="nav-arrow-wrapper">
   <div class="nav-arrow"><a id="back-arrow" href="#back">BACK</a></div>
-  <div class="nav-arrow"><a id="next-arrow" href="next">NEXT</a></div>
+  <div class="nav-arrow"><a id="next-arrow" href="#next">NEXT</a></div>
 </div>
 
 <style>
@@ -28,7 +28,7 @@ const {} = Astro.props;
     writing-mode: vertical-rl;
   }
 
-  .hide {
+  .hide-arrow {
     display: none;
   }
 
@@ -57,6 +57,15 @@ const {} = Astro.props;
 
     const navitems = document.querySelectorAll(".nav-items.nav-anchor");
 
+    const TARGET_IDS = [
+      "home", // 0
+      "productatcurant", // 1
+      "paymentforms", // 2
+      "widgetlibrary", // 3
+      "cats", // 4
+      "contact", // 5
+    ];
+
     if (entry.isIntersecting) {
       console.log(target.id + " is in view!");
       navitems.forEach((i) => {
@@ -64,62 +73,60 @@ const {} = Astro.props;
           .querySelector(".nav-items-wrapper a.active-item")
           ?.classList.remove("active-item");
       });
-      if (target.id === "home") {
-        console.log("home section");
-        backArrowWrapper?.classList.add("hide");
-        nextArrow?.setAttribute("href", "#productatcurant");
-        document.querySelector("#nav-item-home")?.classList.add("active-item");
-      } else if (target.id === "productatcurant") {
-        backArrowWrapper?.classList.remove("hide");
-        nextArrowWrapper?.classList.remove("hide");
-        console.log("productatcurant section");
-        backArrow?.setAttribute("href", "#home");
-        nextArrow?.setAttribute("href", "#paymentforms");
-        document
-          .querySelector("#nav-item-productatcurant")
-          ?.classList.add("active-item");
-      } else if (target.id === "paymentforms") {
-        backArrowWrapper?.classList.remove("hide");
-        nextArrowWrapper?.classList.remove("hide");
-        console.log("paymentforms section");
-        backArrow?.setAttribute("href", "#productatcurant");
-        nextArrow?.setAttribute("href", "#widgetlibrary");
-        document
-          .querySelector("#nav-item-paymentforms")
-          ?.classList.add("active-item");
-      } else if (target.id === "widgetlibrary") {
-        backArrowWrapper?.classList.remove("hide");
-        nextArrowWrapper?.classList.remove("hide");
-        backArrow?.setAttribute("href", "#paymentforms");
-        nextArrow?.setAttribute("href", "#cats");
-        console.log("widgetlibrarysection");
-        document
-          .querySelector("#nav-item-widgetlibrary")
-          ?.classList.add("active-item");
-      } else if (target.id === "cats") {
-        backArrowWrapper?.classList.remove("hide");
-        nextArrowWrapper?.classList.remove("hide");
-        backArrow?.setAttribute("href", "#widgetlibrary");
-        nextArrow?.setAttribute("href", "#contact");
-        console.log("cats section");
-        document.querySelector("#nav-item-cats")?.classList.add("active-item");
-      } else if (target.id === "contact") {
-        nextArrowWrapper?.classList.add("hide");
-        backArrow?.setAttribute("href", "#cats");
-        console.log("contact section");
-        document
-          .querySelector("#nav-item-contact")
-          ?.classList.add("active-item");
+
+      let index = TARGET_IDS.indexOf(target.id);
+      let previousSectionIndex = index - 1;
+      let shouldHidePreviousButton = previousSectionIndex < 0;
+      let nextSectionIndex = index + 1;
+      let shouldHideNextButton = TARGET_IDS.length < nextSectionIndex + 1;
+
+      if (shouldHidePreviousButton) {
+        backArrowWrapper?.classList.add("hide-arrow");
       } else {
-        nextArrowWrapper?.classList.add("hide");
-        backArrowWrapper?.classList.add("hide");
+        backArrowWrapper?.classList.remove("hide-arrow");
+        const previousSection = TARGET_IDS[previousSectionIndex];
+        backArrow?.setAttribute("href", `#${previousSection}`);
       }
+
+      if (shouldHideNextButton) {
+        nextArrowWrapper?.classList.add("hide-arrow");
+      } else {
+        nextArrowWrapper?.classList.remove("hide-arrow");
+        const nextSection = TARGET_IDS[nextSectionIndex];
+        nextArrow?.setAttribute("href", `#${nextSection}`);
+      }
+
+      document
+        .querySelector(`#nav-item-${target.id}`)
+        ?.classList.add("active-item");
     }
   };
 
-  const observer = new IntersectionObserver(callbackRouter, {
-    threshold: 0.2,
+  const WIDE_THRESHOLD = 0.1;
+  const NARROW_THRESHOLD = 0.001;
+
+  const getThreshold = () => {
+    return window.innerWidth < 600 ? NARROW_THRESHOLD : WIDE_THRESHOLD;
+  };
+
+  const newObserver = () => {
+    const observer = new IntersectionObserver(callbackRouter, {
+      root: document.querySelector("#section-wrapper"),
+      threshold: getThreshold(),
+    });
+    const sections = document.querySelectorAll(".in-view");
+    sections.forEach(observer.observe.bind(observer));
+    return observer;
+  };
+
+  const disconnectObserver = (observer: IntersectionObserver) => {
+    observer.disconnect();
+  };
+
+  let observer = newObserver();
+
+  window.addEventListener("resize", () => {
+    disconnectObserver(observer);
+    observer = newObserver();
   });
-  const sections = document.querySelectorAll(".in-view");
-  sections.forEach(observer.observe.bind(observer));
 </script>

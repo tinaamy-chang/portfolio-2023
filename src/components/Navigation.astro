@@ -57,14 +57,16 @@ const {} = Astro.props;
     flex-direction: column;
     overflow-x: auto;
     position: sticky;
-    top: 0;
     height: 100vh;
+    max-width: 200px;
+    transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
   }
 
   .show {
     min-width: 200px;
-    transition: max-width 0.25s ease-in-out;
-    transition: min-width 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
   }
 
   .first-load {
@@ -77,13 +79,13 @@ const {} = Astro.props;
   .hide {
     min-width: 0px;
     max-width: 0px;
-    transition: max-width 0.25s ease-in-out;
-    transition: min-width 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
   }
 
   .nav-collapse {
     min-width: 24px;
-    background-color: blue;
+    background-color: orange;
     height: 100vh;
     position: sticky;
     top: 0;
