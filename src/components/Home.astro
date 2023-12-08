@@ -1,4 +1,6 @@
 ---
+import { Icon } from "astro-icon";
+
 interface Props {}
 
 const {} = Astro.props;
@@ -6,25 +8,62 @@ const {} = Astro.props;
 
 <div class="about-layout">
   <div class="about-wrapper">
-    <img class="about-img" src="https://placehold.co/200" />
-    <h1 class="about-header">Hello, I am Tina. 🐟</h1>
-    <h2 class="about-info">
-      I've been told I'm a "full-stack designer". I have lead marketing and
-      product design for startups.
-    </h2>
-    <h2 class="about-info">
-      Product Research / Design (ui-ux-visual-graphic) / Frontend Development
-      with a dash of Project Management.
-    </h2>
-    <h2 class="about-info">
-      📍 Bay Area, CA
-      <br />
-       🖥️ Product/UI/UX @ Curant
-    </h2>
-
-    <h2 class="about-info">
-      Archive | Resume | LinkedIn | GitHub | Projects v
-    </h2>
+    <img class="about-img" src="https://placehold.co/150" />
+    <div>
+      <h1 class="about-header">
+        Hello, I am Tina <span style="font-weight:300;">(the tuna fish)</span>. <Icon
+          class="fish-icon"
+          name="noto-v1:fish"
+        />
+      </h1>
+      <h2 class="about-info">
+        I've been told I'm a "full-stack designer". I have lead marketing and
+        product design for startups.
+        <br />
+         Product Research / Design (ui-ux-visual-graphic) / Frontend Development
+        with a dash of Project Management.
+      </h2>
+    </div>
+    <div>
+      <h2 class="about-info">
+        <Icon class="nav-icon" name="ph:map-pin-fill" />
+        <p class="text">&nbsp;Bay Area, CA</p>
+        <br />
+        <a href="https://curant.io" target="_blank" class="nav-link"
+          ><Icon class="nav-icon" name="bi:briefcase-fill" />
+          <p class="nav-text">&nbsp;Product/UI/UX @ Curant</p></a
+        >
+      </h2>
+    </div>
+    <div class="about-info">
+      <a href="#" target="_blank" class="nav-link"
+        ><Icon class="nav-icon" name="bi:archive-fill" />
+        <p class="nav-text">&nbsp;Archive</p></a
+      > //
+      <a href="/TChang_Resume_2023.pdf" target="_blank" class="nav-link"
+        ><Icon class="nav-icon" name="uiw:file-text" />
+        <p class="nav-text">&nbsp;Resume</p></a
+      > //
+      <a
+        href="https://www.linkedin.com/in/tinastunas/"
+        class="nav-link"
+        target="_blank"
+        ><Icon class="nav-icon" name="uiw:linkedin" />
+        <p class="nav-text">&nbsp;LinkedIn</p></a
+      >
+       // <a
+        href="https://github.com/tinaamy-chang"
+        class="nav-link"
+        target="_blank"
+        ><Icon class="nav-icon" name="uiw:github" />
+        <p class="nav-text">&nbsp;Github</p></a
+      > // <a href="#productatcurant" class="nav-link">
+        <p class="nav-text">Featured Projects&nbsp;</p><Icon
+          class="nav-icon"
+          name="uiw:down"
+        /></a
+      >
+    </div>
   </div>
 </div>
 
@@ -33,23 +72,28 @@ const {} = Astro.props;
     width: 100%;
     max-width: 100%;
     height: 100vh;
-    background-color: palegoldenrod;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 80px;
+    align-items: center;
 
     @media only screen and (max-width: 600px) {
       height: 100%;
+      padding: 32px 20px;
     }
   }
 
   .about-wrapper {
-    background-color: green;
     width: 80%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
   }
   .about-img {
     border-radius: 100px;
+    max-width: 150px;
   }
   .about-header {
     font-size: 2.5em;
@@ -58,5 +102,30 @@ const {} = Astro.props;
   .about-info {
     font-size: 1.2em;
     margin-bottom: 12px;
+  }
+
+  .fish-icon {
+    height: 32px;
+  }
+
+  .nav-icon {
+    height: 16px;
+  }
+
+  .nav-link {
+    text-decoration: none;
+  }
+
+  .nav-text {
+    vertical-align: 1.5px;
+    display: inline;
+    &:hover {
+      font-weight: 400;
+    }
+  }
+
+  .text {
+    vertical-align: 1.5px;
+    display: inline;
   }
 </style>
