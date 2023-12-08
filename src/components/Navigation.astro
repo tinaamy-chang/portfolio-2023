@@ -1,4 +1,6 @@
 ---
+import { Icon } from "astro-icon";
+
 interface Props {}
 
 const {} = Astro.props;
@@ -11,13 +13,30 @@ const {} = Astro.props;
         <img class="nav-img" src="https://placehold.co/50" />
       </div>
       <div class="nav-items">
-        Tina Chang
-        <br />
-         Product/UI/UX
+        <p class="nav-title">Tina Chang <br />Product/UI/UX</p>
       </div>
-      <div class="nav-items">Resume | LinkedIn</div>
       <div class="nav-items">
-        This website was coded using Astro. Check out my code!
+        <a href="/TChang_Resume_2023.pdf" target="_blank" class="nav-link"
+          ><Icon class="nav-icon" name="uiw:file-text" />
+          <p class="nav-text">&nbsp;Resume</p></a
+        > // <a
+          href="https://www.linkedin.com/in/tinastunas/"
+          class="nav-link"
+          target="_blank"
+          ><Icon class="nav-icon" name="uiw:linkedin" />
+          <p class="nav-text">&nbsp;LinkedIn</p></a
+        >
+      </div>
+      <div class="nav-items">
+        <a
+          class="nav-link"
+          href="https://github.com/tinaamy-chang/portfolio-2023"
+          target="_blank"
+          ><p class="nav-text">
+            This website was coded using Astro. Check out my code!
+          </p>
+          <Icon class="nav-icon" name="majesticons:external-link-line" /></a
+        >
       </div>
     </div>
     <div class="nav-items-wrapper">
@@ -52,7 +71,6 @@ const {} = Astro.props;
 
 <style>
   .nav-wrapper {
-    background-color: red;
     display: flex;
     flex-direction: column;
     overflow-x: auto;
@@ -61,6 +79,7 @@ const {} = Astro.props;
     max-width: 200px;
     transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
+    gap: 20px;
   }
 
   .show {
@@ -85,15 +104,16 @@ const {} = Astro.props;
 
   .nav-collapse {
     min-width: 24px;
-    background-color: orange;
+    background-color: #dbeef7;
     height: 100vh;
     position: sticky;
+    padding: 4px 0;
     top: 0;
     text-align: center;
     transition: background-color 0.25s ease-in-out;
 
     &:hover {
-      background-color: plum;
+      background-color: #c8dfea;
       transition: background-color 0.25s ease-in-out;
       cursor: pointer;
     }
@@ -113,22 +133,47 @@ const {} = Astro.props;
 
   .nav-items {
     min-width: 200px;
-    background-color: green;
-    padding: 4px;
+    padding: 4px 8px;
   }
 
   .nav-anchor {
+    text-decoration: none;
     &:hover {
-      background-color: lightcoral;
+      font-weight: 500;
     }
   }
 
   .active-item {
-    background-color: pink;
+    background-color: #dbeef7;
+    font-weight: 400;
   }
 
   .nav-image {
     border-radius: 100px;
+  }
+
+  .nav-title {
+    font-size: 1.6em;
+    font-weight: 500;
+  }
+
+  .nav-icon {
+    height: 12px;
+  }
+  .nav-link {
+    vertical-align: sub;
+    text-decoration: none;
+    &:hover {
+      font-weight: 400;
+    }
+  }
+
+  .nav-text {
+    vertical-align: text-bottom;
+    display: inline;
+    &:hover {
+      font-weight: 400;
+    }
   }
 </style>
 
