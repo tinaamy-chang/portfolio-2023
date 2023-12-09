@@ -1,31 +1,64 @@
 ---
+import { Icon } from "astro-icon";
+
 interface Props {}
 
 const {} = Astro.props;
 ---
 
 <div class="nav-arrow-wrapper">
-  <div class="nav-arrow"><a id="back-arrow" href="#back">BACK</a></div>
-  <div class="nav-arrow"><a id="next-arrow" href="#next">NEXT</a></div>
+  <div class="nav-arrow">
+    <a id="back-arrow" href="#back">
+      <Icon class="nav-arrow-icon" name="icon-park-outline:double-up" />BACK</a
+    >
+  </div>
+  <div class="nav-arrow">
+    <a id="next-arrow" href="#next"
+      >NEXT<Icon
+        class="nav-arrow-icon"
+        name="icon-park-outline:double-down"
+      /></a
+    >
+  </div>
 </div>
 
 <style>
   .nav-arrow-wrapper {
     position: fixed;
     top: 0;
-    right: 20px;
+    padding: 80px 2px;
+    right: 32px;
     height: 100%;
-    background-color: purple;
+    background-color: #dbeef780;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+
+    @media screen and (max-height: 360px) {
+      padding: 20px 2px;
+    }
   }
   .nav-arrow {
-    background-color: red;
     display: flex;
     flex-direction: column;
     text-orientation: upright;
     writing-mode: vertical-rl;
+  }
+
+  #back-arrow,
+  #next-arrow {
+    transition: transform ease 300ms;
+    color: #779eb280;
+  }
+
+  #back-arrow:hover {
+    transform: translate(0, -8px);
+    transition: transform ease 300ms;
+  }
+
+  #next-arrow:hover {
+    transform: translate(0, 8px);
+    transition: transform ease 300ms;
   }
 
   .hide-arrow {
@@ -34,6 +67,9 @@ const {} = Astro.props;
 
   .active-item {
     background-color: pink;
+  }
+  .nav-arrow-icon {
+    width: 16px;
   }
 </style>
 

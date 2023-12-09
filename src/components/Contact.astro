@@ -1,4 +1,7 @@
 ---
+import { Icon } from "astro-icon";
+import Linkbar from "../components/Linkbar.astro";
+
 interface Props {}
 
 const {} = Astro.props;
@@ -6,41 +9,26 @@ const {} = Astro.props;
 
 <div class="about-layout">
   <div class="about-wrapper">
-    <h1 class="about-header">Let's get in touch. 🐟</h1>
-    <h2 class="about-info">
-      tinaamy.chang@gmail.com or 714 - 515 - 2475 (PST)
-    </h2>
-    <h2 class="about-info">
-      Archive | Resume | LinkedIn | GitHub | Projects v
-    </h2>
+    <div>
+      <h1 class="about-header">
+        Let's get in touch. <Icon
+          class="talk-icon"
+          name="clarity:talk-bubbles-solid"
+        />
+      </h1>
+    </div>
+    <div>
+      <h2 class="about-info">
+        tinaamy.chang@gmail.com or 714 - 515 - 2475 (PST)
+      </h2>
+    </div>
+    <Linkbar ishomesection={false} />
   </div>
 </div>
 
 <style>
-  .about-layout {
-    width: 100%;
-    max-width: 100%;
-    height: 100vh;
-    background-color: palegoldenrod;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    padding: 80px;
-  }
-
-  .about-wrapper {
-    background-color: green;
-    width: 80%;
-  }
-  .about-img {
-    border-radius: 100px;
-  }
-  .about-header {
-    font-size: 2.5em;
-  }
-
-  .about-info {
-    font-size: 1.2em;
-    margin-bottom: 12px;
+  .talk-icon {
+    color: #40bfe7;
+    height: 32px;
   }
 </style>

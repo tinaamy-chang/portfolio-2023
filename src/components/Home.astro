@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon";
+import Linkbar from "../components/Linkbar.astro";
 
 interface Props {}
 
@@ -35,39 +36,11 @@ const {} = Astro.props;
         >
       </h2>
     </div>
-    <div class="about-info">
-      <a href="#" target="_blank" class="nav-link"
-        ><Icon class="nav-icon" name="bi:archive-fill" />
-        <p class="nav-text">&nbsp;Archive</p></a
-      > //
-      <a href="/TChang_Resume_2023.pdf" target="_blank" class="nav-link"
-        ><Icon class="nav-icon" name="uiw:file-text" />
-        <p class="nav-text">&nbsp;Resume</p></a
-      > //
-      <a
-        href="https://www.linkedin.com/in/tinastunas/"
-        class="nav-link"
-        target="_blank"
-        ><Icon class="nav-icon" name="uiw:linkedin" />
-        <p class="nav-text">&nbsp;LinkedIn</p></a
-      >
-       // <a
-        href="https://github.com/tinaamy-chang"
-        class="nav-link"
-        target="_blank"
-        ><Icon class="nav-icon" name="uiw:github" />
-        <p class="nav-text">&nbsp;Github</p></a
-      > // <a href="#productatcurant" class="nav-link">
-        <p class="nav-text">Featured Projects&nbsp;</p><Icon
-          class="nav-icon"
-          name="uiw:down"
-        /></a
-      >
-    </div>
+    <Linkbar ishomesection={true} />
   </div>
 </div>
 
-<style>
+<style is:global>
   .about-layout {
     width: 100%;
     max-width: 100%;
@@ -83,10 +56,14 @@ const {} = Astro.props;
       height: 100%;
       padding: 32px 20px;
     }
+
+    @media screen and (max-height: 480px) {
+      height: 100%;
+    }
   }
 
   .about-wrapper {
-    width: 80%;
+    width: 90%;
     display: flex;
     gap: 20px;
     flex-direction: column;
@@ -106,22 +83,6 @@ const {} = Astro.props;
 
   .fish-icon {
     height: 32px;
-  }
-
-  .nav-icon {
-    height: 16px;
-  }
-
-  .nav-link {
-    text-decoration: none;
-  }
-
-  .nav-text {
-    vertical-align: 1.5px;
-    display: inline;
-    &:hover {
-      font-weight: 400;
-    }
   }
 
   .text {
