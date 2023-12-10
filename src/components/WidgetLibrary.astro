@@ -4,101 +4,222 @@ interface Props {}
 const {} = Astro.props;
 ---
 
-<div class="bg-color">
-  <h1>The Widget Library</h1>
-  <p>
-    The Widget Library is a web application I built at Bio-Rad. It helps sales
-    representatives quickly build personalized and targeted communications for
-    their customers by providing them with a library of interactive marketing
-    materials that link to Bio-Rad landing pages. They no longer have to
-    download, save, and organize marketing graphics. The materials are all in
-    one place and always up to date.
-  </p>
-  <h2>scope</h2>
-  <p>
-    <ul>
-      <li><strong>Audience:</strong> Bio-Rad Marketing & Sales</li>
-      <li>
+<div class="project-wrapper">
+  <div class="section-container">
+    <div>
+      <h1>Widget Library</h1>
+      <div>
+        <p>Bio-Rad Laboratories</p><p>UI/UX & Frontend Development</p>
+      </div>
+    </div>
+    <div class="text-wrapper">
+      <p>
+        The Widget Library is a web application that helps sales representatives
+        quickly build personalized and targeted communications for their
+        customers. It is a library of marketing graphics AKA "Widgets" that are
+        pre-linked to Bio-Rad marketing and product pages. Sales reps at Bio-Rad
+        no longer have to download, save, and organize widgets and website URLs.
+        The materials are all in one place and always up to date.
+      </p>
+    </div>
+    <div class="section-wrapper">
+      <div><img src="https://placehold.co/200" /></div>
+      <div><img src="https://placehold.co/200" /></div>
+      <div><img src="https://placehold.co/200" /></div>
+    </div>
+  </div>
+
+  <div class="section-container">
+    <h2>scope</h2>
+    <img class="project-image" src="https://placehold.co/1000x100" />
+    <div class="text-wrapper">
+      <p>
+        <strong>Users:</strong> Bio-Rad Marketing & Sales
+      </p>
+      <p>
         <strong>Problem:</strong> Marketing has many product, event, awareness,
         and educational landing pages that they want Sales to use more. Sales is
         looking for a new ways to appeal to and engage their customers with
         Bio-Rad content and landing pages. How do we marry the two?
-      </li>
-      <li>
+      </p>
+      <p>
         <strong>Solution:</strong> Build a library of graphics, referred to
         internally as Widgets, that Sales can place into their emails to drive
         customer engagement with materials that Marketing has produced.
-      </li>
-      <li>
+      </p>
+      <p>
         <strong>Key Ideas:</strong> It should be quick and easy for Sales to
         create visually appealing emails using Marketing Widgets with mininmal
         error.
-      </li>
-    </ul>
-  </p>
-  <h2>wireframes</h2>
-  <h3>Homepage/How to Use/Request form</h3>
-  <img src="https://placehold.co/1000x75" />
-  <h3>Search and Categorization</h3>
-  <img src="https://placehold.co/1000x75" />
-  <h3>Widget Displays</h3>
-  <img src="https://placehold.co/1000x75" />
-  <h2>version 1.0 demo video: hi-fi prototype</h2>
-  <div class="section">
-    <div class="half"><img src="https://placehold.co/400x300" /></div>
-    <div class="half">
-      <h3>Feedback:</h3><p>
-        <ul>
-          <li>Straightforward to navigate</li>
-          <li>
-            Clear, short instructions let the user understand what to do quickly
-            and dive into using the tool
-          </li>
-          <li>Needs more branding</li>
-          <li>Navigation bar needs cleaning up</li>
-          <li>Needs a FAQ section</li>
-        </ul>
       </p>
     </div>
   </div>
-  <h2>version 2.0 demo video: released for use</h2>
-  <div class="section">
-    <div class="half"><img src="https://placehold.co/400x300" /></div>
-    <div class="half">
-      <h3>Feedback:</h3><p>
-        <ul>
-          <li>
-            Needs scalability for regional content, including translations
-          </li>
-          <li>A search bar for widgets when there are more created</li>
-          <li>
-            Needs a way for the user to know which landing page is linked to the
-            widget at a glance
-          </li>
-        </ul>
-      </p>
+
+  <div class="section-container">
+    <h2>research</h2>
+    <div>
+      <div class="text-wrapper">
+        <h3>Getting to know our user persona</h3>
+        <p>
+          <ul>
+            <li>Sales Reps at Bio-Rad are typically women around 30-45.</li>
+            <li>Literate in common software like MS Word, Excel, and Email.</li>
+            <li>
+              The most common sales workflow is meeting in person or calling
+              preexisting known leads, then using an email to follow up.
+            </li>
+            <li>
+              For sending their leads to website pages about their product, they
+              typically have a doc that they copy and paste from. Otherwise,
+              they will just search the Bio-Rad for what they are looking for or
+              ask a coworker.
+            </li>
+            <li>
+              However, most of the time they just have a brochure at hand or
+              will just download the most recent one from the Bio-Rad server
+              because they're not sure where or what the website pages are.
+            </li>
+          </ul>
+        </p>
+      </div>
+    </div>
+    <div>
+      <h3>Inspirations</h3>
+      <div class="section-wrapper">
+        <div><img src="https://placehold.co/100" /></div>
+        <div><img src="https://placehold.co/100" /></div>
+        <div><img src="https://placehold.co/100" /></div>
+        <div><img src="https://placehold.co/100" /></div>
+      </div>
     </div>
   </div>
-  <h2>example of a Widget in use</h2>
-  <h3>Screenshots from the demo videos</h3>
-  <div class="section">
-    <div><img src="https://placehold.co/200" /></div>
-    <div><img src="https://placehold.co/200" /></div>
-    <div><img src="https://placehold.co/200" /></div>
+
+  <div class="section-container">
+    <h2>wireframes</h2>
+    <div>
+      <h3>Homepage/How to Use/Request form</h3>
+      <img class="project-image" src="https://placehold.co/1000x75" />
+    </div>
+    <div>
+      <h3>Search and Categorization</h3>
+      <img class="project-image" src="https://placehold.co/1000x75" />
+    </div>
+    <div>
+      <h3>Widget Displays</h3>
+      <img class="project-image" src="https://placehold.co/1000x75" />
+    </div>
+  </div>
+
+  <div class="section-container">
+    <h2>version 1.0 demo video: hi-fi prototype</h2>
+    <div class="section-wrapper">
+      <div class="half">
+        <img class="project-image" src="https://placehold.co/400x300" />
+      </div>
+      <div class="half">
+        <h3>Feedback:</h3><p>
+          <ul>
+            <li>Straightforward to navigate</li>
+            <li>
+              Clear, short instructions let the user understand what to do
+              quickly and dive into using the tool
+            </li>
+            <li>Needs more branding</li>
+            <li>Navigation bar needs cleaning up</li>
+            <li>Needs a FAQ section</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-container">
+    <h2>version 2.0 demo video: released for use</h2>
+    <div class="section-wrapper">
+      <div class="half">
+        <img class="project-image" src="https://placehold.co/400x300" />
+      </div>
+      <div class="half">
+        <h3>Feedback:</h3><p>
+          <ul>
+            <li>
+              Needs scalability for regional content, including regional
+              translations
+            </li>
+            <li>A search bar for widgets when there are more created</li>
+            <li>
+              Needs a way for the user to know which landing page is linked to
+              the widget at a glance
+            </li>
+            <li>
+              Needs a way to add custom Google Analytics tags without doing it
+              completely manually
+            </li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-container">
+    <h2>example of a Widget in use</h2>
+    <h3>Screenshots from the demo videos</h3>
+    <div class="section-wrapper">
+      <div><img src="https://placehold.co/200" /></div>
+      <div><img src="https://placehold.co/200" /></div>
+      <div><img src="https://placehold.co/200" /></div>
+    </div>
+  </div>
+
+  <div class="section-container">
+    <h2>results</h2>
+    <div>
+      <div class="text-wrapper">
+        <p>Marketers and sales reps</p>
+      </div>
+    </div>
   </div>
 </div>
 
 <style>
-  .bg-color {
-    background-color: darkcyan;
-  }
-  .section {
+  .project-wrapper {
     display: flex;
-    gap: 20px;
+    width: 100%;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .section-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .section-wrapper {
+    display: flex;
     justify-content: space-evenly;
+    width: 100%;
+    gap: 48px;
+    flex-wrap: wrap;
+    @media only screen and (max-width: 660px) {
+      gap: 20px;
+    }
   }
 
   .half {
+    width: 45%;
+
+    @media only screen and (max-width: 660px) {
+      width: 100%;
+    }
+  }
+
+  .project-image {
     width: 100%;
+    height: auto;
+  }
+
+  .text-wrapper {
+    width: 75%;
   }
 </style>
