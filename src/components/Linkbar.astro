@@ -52,6 +52,13 @@ const { ishomesection } = Astro.props;
 <style is:global>
   .nav-link {
     text-decoration: none;
+    margin: -1px -4px;
+    border-width: 1px 4px;
+    border-style: solid;
+    border-color: transparent;
+    &:hover {
+      background-color: #dbeef7;
+    }
   }
 
   .nav-text {

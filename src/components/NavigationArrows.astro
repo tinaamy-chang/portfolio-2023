@@ -8,8 +8,8 @@ const {} = Astro.props;
 
 <div class="nav-arrow-wrapper">
   <div class="nav-arrow">
-    <a id="back-arrow" href="#back">
-      <Icon class="nav-arrow-icon" name="icon-park-outline:double-up" />BACK</a
+    <a id="prev-arrow" href="#prev">
+      <Icon class="nav-arrow-icon" name="icon-park-outline:double-up" />PREV</a
     >
   </div>
   <div class="nav-arrow">
@@ -45,13 +45,13 @@ const {} = Astro.props;
     writing-mode: vertical-rl;
   }
 
-  #back-arrow,
+  #prev-arrow,
   #next-arrow {
     transition: transform ease 300ms;
     color: #779eb280;
   }
 
-  #back-arrow:hover {
+  #prev-arrow:hover {
     transform: translate(0, -8px);
     transition: transform ease 300ms;
   }
@@ -83,12 +83,12 @@ const {} = Astro.props;
       | undefined
       | null;
 
-    let backArrow = document.getElementById("back-arrow") as
+    let prevArrow = document.getElementById("prev-arrow") as
       | HTMLLinkElement
       | undefined
       | null;
 
-    const backArrowWrapper = document.querySelector("#back-arrow");
+    const prevArrowWrapper = document.querySelector("#prev-arrow");
     const nextArrowWrapper = document.querySelector("#next-arrow");
 
     const navitems = document.querySelectorAll(".nav-items.nav-anchor");
@@ -117,11 +117,11 @@ const {} = Astro.props;
       let shouldHideNextButton = TARGET_IDS.length < nextSectionIndex + 1;
 
       if (shouldHidePreviousButton) {
-        backArrowWrapper?.classList.add("hide-arrow");
+        prevArrowWrapper?.classList.add("hide-arrow");
       } else {
-        backArrowWrapper?.classList.remove("hide-arrow");
+        prevArrowWrapper?.classList.remove("hide-arrow");
         const previousSection = TARGET_IDS[previousSectionIndex];
-        backArrow?.setAttribute("href", `#${previousSection}`);
+        prevArrow?.setAttribute("href", `#${previousSection}`);
       }
 
       if (shouldHideNextButton) {

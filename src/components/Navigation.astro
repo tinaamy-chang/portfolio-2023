@@ -140,12 +140,17 @@ const {} = Astro.props;
     text-decoration: none;
     &:hover {
       font-weight: 500;
+      background-color: #dbeef7;
     }
   }
 
   .active-item {
     background-color: #dbeef7;
     font-weight: 400;
+    &:hover {
+      font-weight: 500;
+      background-color: #c8dfea;
+    }
   }
 
   .nav-image {
@@ -163,8 +168,13 @@ const {} = Astro.props;
   .nav-link {
     vertical-align: sub;
     text-decoration: none;
+    margin: -1px -4px;
+    border-width: 1px 4px;
+    border-style: solid;
+    border-color: transparent;
     &:hover {
       font-weight: 400;
+      background-color: #dbeef7;
     }
   }
 

@@ -5,11 +5,16 @@ const {} = Astro.props;
 ---
 
 <div class="project-wrapper">
-  <div class="section-container">
+  <div class="project-description">
     <div>
       <h1>Widget Library</h1>
       <div>
-        <p>Bio-Rad Laboratories</p><p>UI/UX & Frontend Development</p>
+        <p>
+          <a class="job-link" href="https://bio-rad.com" target="_blank"
+            >Bio-Rad Laboratories</a
+          >
+        </p>
+        <p>UI/UX & Frontend Development</p>
       </div>
     </div>
     <div class="text-wrapper">
@@ -17,37 +22,50 @@ const {} = Astro.props;
         The Widget Library is a web application that helps sales representatives
         quickly build personalized and targeted communications for their
         customers. It is a library of marketing graphics AKA "Widgets" that are
-        pre-linked to Bio-Rad marketing and product pages. Sales reps at Bio-Rad
-        no longer have to download, save, and organize widgets and website URLs.
-        The materials are all in one place and always up to date.
+        pre-linked to <span class="no-break">Bio-Rad</span> marketing and
+        product pages. Sales reps at <span class="no-break">Bio-Rad</span>
+         no longer have to download, save, and organize widgets and website
+        URLs. The materials are all in one place and always up to date.
       </p>
     </div>
-    <div class="section-wrapper">
-      <div><img src="https://placehold.co/200" /></div>
-      <div><img src="https://placehold.co/200" /></div>
-      <div><img src="https://placehold.co/200" /></div>
+    <div class="section-wrapper image-wrapper">
+      <div>
+        <img class="widget-gif border" src="/widget_copy.gif" alt="Copy GIF" />
+      </div>
+      <div>
+        <img
+          class="widget-gif border"
+          src="/widget_paste.gif"
+          alt="Paste GIF"
+        />
+      </div>
+      <div>
+        <img class="widget-gif border" src="/widget_send.gif" alt="Send GIF" />
+      </div>
     </div>
   </div>
 
   <div class="section-container">
-    <h2>scope</h2>
-    <img class="project-image" src="https://placehold.co/1000x100" />
-    <div class="text-wrapper">
-      <p>
-        <strong>Users:</strong> Bio-Rad Marketing & Sales
+    <div class="section-header"><h2>scope</h2></div>
+    <div class="section-content">
+      <img class="project-image" src="https://placehold.co/1000x100" />
+      <p class="text-wrapper">
+        <strong>Users:</strong>
+        <span class="no-break">Bio-Rad</span> Marketing & Sales
       </p>
-      <p>
+      <p class="text-wrapper">
         <strong>Problem:</strong> Marketing has many product, event, awareness,
         and educational landing pages that they want Sales to use more. Sales is
         looking for a new ways to appeal to and engage their customers with
-        Bio-Rad content and landing pages. How do we marry the two?
+        <span class="no-break">Bio-Rad</span> content and landing pages. How do
+        we marry the two?
       </p>
-      <p>
+      <p class="text-wrapper">
         <strong>Solution:</strong> Build a library of graphics, referred to
         internally as Widgets, that Sales can place into their emails to drive
         customer engagement with materials that Marketing has produced.
       </p>
-      <p>
+      <p class="text-wrapper">
         <strong>Key Ideas:</strong> It should be quick and easy for Sales to
         create visually appealing emails using Marketing Widgets with mininmal
         error.
@@ -56,14 +74,16 @@ const {} = Astro.props;
   </div>
 
   <div class="section-container">
-    <h2>research</h2>
-    <div>
+    <div class="section-header"><h2>research</h2></div>
+    <div class="section-content">
       <div class="text-wrapper">
-        <h3>Getting to know our user persona</h3>
+        <h3>Getting to know our users</h3>
         <p>
           <ul>
-            <li>Sales Reps at Bio-Rad are typically women around 30-45.</li>
-            <li>Literate in common software like MS Word, Excel, and Email.</li>
+            <li>
+              In their day to day they use software like MS Word, Excel, Adobe
+              Acrobat, and Email.
+            </li>
             <li>
               The most common sales workflow is meeting in person or calling
               preexisting known leads, then using an email to follow up.
@@ -71,155 +91,337 @@ const {} = Astro.props;
             <li>
               For sending their leads to website pages about their product, they
               typically have a doc that they copy and paste from. Otherwise,
-              they will just search the Bio-Rad for what they are looking for or
-              ask a coworker.
+              they will just search the <span class="no-break">Bio-Rad</span>
+               for what they are looking for or ask a coworker.
             </li>
             <li>
-              However, most of the time they just have a brochure at hand or
-              will just download the most recent one from the Bio-Rad server
-              because they're not sure where or what the website pages are.
+              Most of the time they just have a brochure at hand or will just
+              download the most recent one from the <span class="no-break"
+                >Bio-Rad</span
+              > FTP server because they're not sure where or what the website
+              pages are.
             </li>
           </ul>
         </p>
       </div>
     </div>
-    <div>
-      <h3>Inspirations</h3>
+  </div>
+
+  <div class="section-container">
+    <div class="section-header"><h2>wireframes</h2></div>
+    <div class="section-content">
+      <div>
+        <h3>Homepage/How to Use/Request form</h3>
+        <img class="project-image" src="https://placehold.co/1000x75" />
+      </div>
+      <div>
+        <h3>Search and Categorization</h3>
+        <img class="project-image" src="https://placehold.co/1000x75" />
+      </div>
+      <div>
+        <h3>Widget Displays</h3>
+        <img class="project-image" src="https://placehold.co/1000x75" />
+      </div>
+    </div>
+  </div>
+
+  <div class="section-container">
+    <div class="section-header">
+      <h2>version 1.0 demo video: hi-fi prototype</h2>
+    </div>
+    <div class="section-content">
       <div class="section-wrapper">
-        <div><img src="https://placehold.co/100" /></div>
-        <div><img src="https://placehold.co/100" /></div>
-        <div><img src="https://placehold.co/100" /></div>
-        <div><img src="https://placehold.co/100" /></div>
+        <div class="half">
+          <iframe
+            class="responsive-video border"
+            src="https://www.youtube.com/embed/hoxgN3HxcB8"
+            title="Widget Library Demo v1.0"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+
+          <div class="section-wrapper-no-responsive">
+            <img
+              class="half-no-responsive border"
+              src="/widget_demo1-1.png"
+              alt="Screenshot from v1.0 Demo Video: home page"
+            />
+            <img
+              class="half-no-responsive border"
+              src="/widget_demo1-2.png"
+              alt="Screenshot from v1.0 Demo Video: widget page"
+            />
+          </div>
+        </div>
+        <div class="half">
+          <h3>Feedback:</h3><p>
+            <ul>
+              <li>Straightforward to navigate</li>
+              <li>
+                Clear, short instructions let the user understand what to do
+                quickly and dive into using the tool
+              </li>
+              <li>Needs more branding</li>
+              <li>Navigation bar needs cleaning up</li>
+              <li>Needs a FAQ section</li>
+            </ul>
+          </p>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="section-container">
-    <h2>wireframes</h2>
-    <div>
-      <h3>Homepage/How to Use/Request form</h3>
-      <img class="project-image" src="https://placehold.co/1000x75" />
+    <div class="section-header">
+      <h2>version 2.0 demo video: released for use</h2>
     </div>
-    <div>
-      <h3>Search and Categorization</h3>
-      <img class="project-image" src="https://placehold.co/1000x75" />
-    </div>
-    <div>
-      <h3>Widget Displays</h3>
-      <img class="project-image" src="https://placehold.co/1000x75" />
-    </div>
-  </div>
+    <div class="section-content">
+      <div class="section-wrapper responsive-center">
+        <div class="half">
+          <iframe
+            class="responsive-video border"
+            src="https://www.youtube.com/embed/QymBTeX-tUY"
+            title="Widget Library Demo v2.0"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
 
-  <div class="section-container">
-    <h2>version 1.0 demo video: hi-fi prototype</h2>
-    <div class="section-wrapper">
-      <div class="half">
-        <img class="project-image" src="https://placehold.co/400x300" />
-      </div>
-      <div class="half">
-        <h3>Feedback:</h3><p>
-          <ul>
-            <li>Straightforward to navigate</li>
-            <li>
-              Clear, short instructions let the user understand what to do
-              quickly and dive into using the tool
-            </li>
-            <li>Needs more branding</li>
-            <li>Navigation bar needs cleaning up</li>
-            <li>Needs a FAQ section</li>
-          </ul>
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="section-container">
-    <h2>version 2.0 demo video: released for use</h2>
-    <div class="section-wrapper">
-      <div class="half">
-        <img class="project-image" src="https://placehold.co/400x300" />
-      </div>
-      <div class="half">
-        <h3>Feedback:</h3><p>
-          <ul>
-            <li>
-              Needs scalability for regional content, including regional
-              translations
-            </li>
-            <li>A search bar for widgets when there are more created</li>
-            <li>
-              Needs a way for the user to know which landing page is linked to
-              the widget at a glance
-            </li>
-            <li>
-              Needs a way to add custom Google Analytics tags without doing it
-              completely manually
-            </li>
-          </ul>
-        </p>
+          <div class="section-wrapper-no-responsive">
+            <img
+              class="half-no-responsive border"
+              src="/widget_demo2-1.png"
+              alt="Screenshot from v2.0 Demo Video: home page"
+            />
+            <img
+              class="half-no-responsive border"
+              src="/widget_demo2-2.png"
+              alt="Screenshot from v2.0 Demo Video: widget page"
+            />
+          </div>
+        </div>
+        <div class="half">
+          <h3>Feedback:</h3><p>
+            <ul>
+              <li>
+                Needs scalability for regional content, including regional
+                translations
+              </li>
+              <li>A search bar for widgets when there are more created</li>
+              <li>
+                Needs a way for the user to know which landing page is linked to
+                the widget at a glance
+              </li>
+              <li>
+                Needs a way to add custom Google Analytics tags without doing it
+                completely manually
+              </li>
+            </ul>
+          </p>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="section-container">
-    <h2>example of a Widget in use</h2>
-    <h3>Screenshots from the demo videos</h3>
-    <div class="section-wrapper">
-      <div><img src="https://placehold.co/200" /></div>
-      <div><img src="https://placehold.co/200" /></div>
-      <div><img src="https://placehold.co/200" /></div>
+    <div class="section-header">
+      <h2>example of a Widget in use</h2>
+    </div>
+    <div class="section-content">
+      <h3>Screenshots from the demo videos</h3>
+      <div class="section-wrapper responsive-center">
+        <div class="widget-usage-wrapper">
+          <img
+            class="widget-usage border"
+            src="/widget_usage1.png"
+            alt="Email and where to paste"
+          />
+        </div>
+        <div class="widget-usage-wrapper">
+          <img
+            class="widget-usage border"
+            src="/widget_usage2.png"
+            alt="Widget when pasted"
+          />
+        </div>
+        <div class="widget-usage-wrapper">
+          <img
+            class="widget-usage border"
+            src="/widget_usage3.png"
+            alt="Widget in mobile mode"
+          />
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="section-container">
-    <h2>results</h2>
-    <div>
-      <div class="text-wrapper">
-        <p>Marketers and sales reps</p>
-      </div>
+    <div class="section-header"><h2>results/adoption</h2></div>
+    <div class="section-content">
+      <p class="text-wrapper">
+        This library was originally soft-launched to one division: The HPLC
+        marketers and sales. Soon after, word spread and we were asked by other
+        divisions (there are 5 total in <span class="no-break">Bio-Rad</span>
+         CDG) to create some Widgets for their product websites and landing
+        pages too.
+        <br />
+         When scoping marketing campaigns, Widgets became optional material for
+        the campaign and most marketers would opt for the creation of them.
+        <br />
+         Marketers and Sales found that it helped drastically lessen the time
+        needed to dig around for a relevant product brochure or website. Also,
+        it helped sales both promote and align with the current marketing
+        campaign being run for their products.
+        <br />
+         Additionally, it helped marketing teams revive older webpages and
+        incentivized them to maintain them for Widgets to generate new leads.
+      </p>
     </div>
   </div>
-</div>
 
-<style>
-  .project-wrapper {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    gap: 32px;
-  }
-  .section-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
+  <style>
+    .project-wrapper {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      gap: 56px;
+    }
 
-  .section-wrapper {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    gap: 48px;
-    flex-wrap: wrap;
-    @media only screen and (max-width: 660px) {
+    .section-container {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      @media only screen and (max-width: 660px) {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+
+    .project-description {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
       gap: 20px;
     }
-  }
 
-  .half {
-    width: 45%;
-
-    @media only screen and (max-width: 660px) {
-      width: 100%;
+    .section-header {
+      width: 250px;
     }
-  }
 
-  .project-image {
-    width: 100%;
-    height: auto;
-  }
+    .section-content {
+      margin-top: 8px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
 
-  .text-wrapper {
-    width: 75%;
-  }
-</style>
+    .section-wrapper {
+      display: flex;
+      width: 100%;
+      gap: 48px;
+      flex-wrap: wrap;
+      @media only screen and (max-width: 660px) {
+        gap: 20px;
+      }
+    }
+
+    .section-wrapper-no-responsive {
+      display: flex;
+      width: 100%;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+
+    .image-wrapper {
+      margin: 40px 0;
+      justify-content: space-evenly;
+    }
+
+    .half {
+      width: 45%;
+
+      @media only screen and (max-width: 1000px) {
+        width: 100%;
+      }
+    }
+
+    .half-no-responsive {
+      width: 45%;
+    }
+
+    .project-image {
+      width: 100%;
+      height: auto;
+    }
+
+    .text-wrapper {
+      width: 75%;
+      @media only screen and (max-width: 660px) {
+        width: 100%;
+      }
+    }
+
+    .responsive-video {
+      aspect-ratio: 16 / 9;
+      width: 100%;
+      border: 1px solid #efefef;
+      border-radius: 4px;
+    }
+
+    .no-break {
+      white-space: nowrap;
+    }
+
+    .responsive-center {
+      @media only screen and (max-width: 1000px) {
+        justify-content: space-evenly;
+      }
+    }
+
+    .border {
+      border: 1px solid #efefef;
+      border-radius: 4px;
+    }
+
+    .job-link {
+      font-weight: 400;
+      margin: -1px -8px;
+      border-width: 1px 8px;
+      border-style: solid;
+      border-color: transparent;
+      &:hover {
+        font-weight: 500;
+        background-color: #dbeef7;
+      }
+    }
+
+    /* only widget page */
+
+    .widget-gif {
+      max-width: 200px;
+      height: auto;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+      @media only screen and (max-width: 660px) {
+        max-width: 100px;
+      }
+    }
+
+    .widget-usage-wrapper {
+      width: 29%;
+      @media only screen and (max-width: 1000px) {
+        width: 90%;
+      }
+    }
+
+    .widget-usage {
+      width: 100%;
+      height: auto;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+  </style>
+</div>
