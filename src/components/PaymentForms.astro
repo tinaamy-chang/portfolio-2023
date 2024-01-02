@@ -19,15 +19,14 @@ const {} = Astro.props;
     </div>
     <div class="text-wrapper">
       <p>
-        Payment Forms are customizable forms that make it easy for our users to
-        recieve and track payments from their clients. They're nothing new in
-        the FinTech space, however, may of our users use blah blah.
+        Payment Forms are customizable forms that make it easy for 3PLs and
+        Freight Forwarders to recieve payments from their clients.
 
         <br />
         <br />
          Curant's Payment Forms helped <a
           class="link-styling"
-          href="https://awaship.com"
+          href="https://www.curant.io/case-studies/awa"
           target="_blank">American Worldwide Agencies (AWA)</a
         > shrink credit card payment times by 75% and streamlined their A/R
         operations. <a
@@ -42,81 +41,147 @@ const {} = Astro.props;
   <div class="section-container">
     <div class="section-header"><h2>scope</h2></div>
     <div class="section-content">
-      <div>
-        <p class="text-wrapper">
-          <strong>Users:</strong>
-          <ol>
-            <li>Clients (shippers) of our user who use the form to pay</li>
-            <li>
-              Our User (3PL/Freight Forwarders) who controls and receives
-              payments from the form.
-            </li>
-          </ol>
-        </p>
-      </div>
-      <p class="text-wrapper">
-        <strong>Problem:</strong> Many users already have some sort of invoicing
-        system but collect payment through highly inefficient ways such as a
-        paper form or bank routing numbers. Additionally, receiving payment in
-        these ways does not connect to their accounting or Transportation
-        Management System (TMS), making it hard for users to track.
-      </p>
-      <p>
-        Example of a paper form one of our users uses to collect Credit Card
-        Payments: (Image from customer)
-      </p>
-      <p class="text-wrapper">
-        <strong>Solution:</strong> Design and build a form that accepts digital
-        payments. Make it easy to track who, what, and when a payment came from.
-      </p>
-      <p class="text-wrapper">
-        <strong>Business sellpoint:</strong> This form is a great way for users
-        to get started on Curant without without changing their current
-        workflow. Eventually, they can move to Curant for more advanced features
-        like invoicing or payments once they are more familiar with it.
-      </p>
-      <div>
-        <p class="text-wrapper">
-          <strong>Key Features:</strong>
+      <div class="section-wrapper">
+        <div class="half">
+          <h3>
+            Payments are being collected through highly inefficient ways such as
+            a paper form or bank routing numbers.
+          </h3>
           <ul>
-            <li>Needs to provide a sufficient amount of security</li>
             <li>
-              Form is not unique per client, only to the business using it to
-              receive payments
+              Insecure method that often needs back and forth communication to
+              aquire information
             </li>
-            <li>Needs to be able to accept multiple forms of payments</li>
+            <li>
+              Hard to track; time is often wasted digging around for
+              reconcillation
+            </li>
+            <li>
+              Does not connect to Accounting or Transportation Management System
+              (TMS)
+            </li>
           </ul>
-        </p>
+        </div>
+        <div class="half">
+          <div class="section-wrapper" style="flex-wrap:nowrap; gap: 20px;">
+            <div class="half">
+              <img class="project-image" src="https://placehold.co/160x220/" />
+            </div>
+            <div class="half">
+              <p>
+                <em
+                  >an example of a paper form used to collect credit card
+                  payments</em
+                >
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="section-container">
     <div class="section-header"><h2>research</h2></div>
-    <div class="section-content">inspirations (+ noted restrictions)</div>
+    <div class="section-content">
+      <div class="section-wrapper">
+        <div class="half">
+          <img class="project-image" src="https://placehold.co/200x200/" />
+        </div>
+        <div class="half">
+          <h3>Payment forms aren't anything new.</h3>
+          <p style="margin-bottom: 20px;">
+            We just needed an MVP to start collecting payments & understanding
+            user needs.
+          </p>
+
+          <h3>
+            ...but design needs to keep business & engineering decisions in
+            mind.
+          </h3>
+          <ul>
+            <li>
+              By using <a
+                class="link-styling"
+                href="https://dwolla.com"
+                target="_blank">Dwolla</a
+              > for ACH payments, we need to verify & create accounts for
+              clients. They require email, name, and business name.
+            </li>
+            <li>
+              We can only control up to when the user selects a method to pay—
+              from there connecting a bank (Plaid) or using card (Stripe), we
+              will have to use their requirements for the UI/UX.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="section-container">
     <div class="section-header"><h2>phase 1: mvp</h2></div>
     <div class="section-content">
-      <h3>MVP Goals</h3>
-      <p>capture more transactions</p><p>capture more transactions</p>
+      <h3>
+        Create more transactions, connect it to the Curant Dashboard, launch
+        credit card payments.
+      </h3>
+      <img class="project-image" src="https://placehold.co/1000x75" />
     </div>
   </div>
 
   <div class="section-container">
-    <div class="section-header"><h2>phase 2:</h2></div>
-    <div class="section-content">settings</div>
+    <div class="section-header"><h2>phase 2: user needs</h2></div>
+    <div class="section-content">
+      <h3>
+        Allow more unique forms to be created, form customization, fees
+        customization, create a "guest checkout" for card payments.
+      </h3>
+      <img class="project-image" src="https://placehold.co/1000x75" />
+    </div>
   </div>
 
   <div class="section-container">
     <div class="section-header"><h2>final</h2></div>
-    <div class="section-content">hi-fi show</div>
+    <div class="section-content">
+      <img class="project-image" src="https://placehold.co/1000x75" />
+    </div>
   </div>
 
   <div class="section-container">
-    <div class="section-header"><h2>feedback/discoveries</h2></div>
-    <div class="section-content">feedback discoveries</div>
+    <div class="section-header"><h2>outcome</h2></div>
+    <div class="section-content">
+      <div class="text-wrapper">
+        <h3>
+          We were able to get users started on Curant without without changing
+          their current workflow.
+        </h3>
+        <p>
+          Eventually the goal was to Curant for more advanced features like
+          invoicing or payments to vendors.
+        </p>
+      </div>
+      <div class="text-wrapper">
+        <h3>An interesting discovery that led to a new feature</h3>
+        <p>
+          Even after launch, some clients of our customers either still
+          preferred the paper form or have a distrust of digital payment
+          platforms. Therefore, our customers started to submit payments to
+          themselves on behalf of their clients. This resulted in the birth of
+          another feature: "Pay on Behalf".
+        </p>
+      </div>
+      <div class="text-wrapper">
+        <p>
+          Curant Payment Forms shinks credit card payment times by 75% and
+          streamlines A/R operations. <a
+            class="link-styling"
+            href="https://www.curant.io/case-studies/awa"
+            target="_blank">Read the case study here.</a
+          >
+        </p>
+      </div>
+    </div>
   </div>
 
   <style></style>
