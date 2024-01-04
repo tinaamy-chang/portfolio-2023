@@ -1,5 +1,6 @@
 ---
 interface Props {}
+import { Icon } from "astro-icon";
 
 const {} = Astro.props;
 ---
@@ -43,11 +44,15 @@ const {} = Astro.props;
     <div class="section-content">
       <div class="section-wrapper">
         <div class="half">
-          <h3>A look into Curant's 2021 - 2022 achivements</h3>
-          <img class="project-image" src="https://placehold.co/160x220/" />
+          <h3>Curant's 2022 year in review</h3>
+          <img
+            class="project-image border rounded-corners"
+            src="/curant_year-in-review.png"
+            alt="infographic about Curant's 2022 year in review"
+          />
         </div>
         <div class="half">
-          <h3>From $0 to over $1 million in transactions</h3>
+          <h3>From $0 to over $12 million in transactions</h3>
           <img class="project-image" src="https://placehold.co/160x100/" />
           <img class="project-image" src="https://placehold.co/160x100/" />
         </div>
@@ -58,22 +63,91 @@ const {} = Astro.props;
   <div class="section-container">
     <div class="section-header"><h2>redesign</h2></div>
     <div class="section-content">
-      <h3>A need for modernization and product scalability</h3>
-      <img class="project-image" src="https://placehold.co/1000x75" />
+      <div>
+        <h3>Modernization, brand standardization, and product scalability</h3>
+        <div class="section-wrapper">
+          <div class="forth">
+            <img
+              class="project-image rounded-corners"
+              src="/curant_redesign-old.png"
+              alt="Curant's old design"
+              style="max-width:270px;"
+            />
+            <div class="caption-wrapper">
+              <p class="caption">
+                <em>old app design&nbsp;</em>
+                <Icon class="icon" name="ic:outline-arrow-upward" />
+              </p>
+            </div>
+          </div>
+          <div class="three-forths">
+            <div class="caption-wrapper">
+              <Icon
+                class="icon"
+                name="ic:outline-arrow-downward"
+                style="margin-bottom:8px;"
+              /><p class="caption" style="margin-top:-4px">
+                <em>&nbsp;refreshed design, branding, and components</em>
+              </p>
+            </div>
+            <img
+              class="project-image rounded-corners"
+              src="/curant_redesign-new.png"
+              alt="Curant's new redesign"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="section-container">
     <div class="section-header"><h2>marketing</h2></div>
     <div class="section-content">
-      <h3>Refreshed landing page to capture new leads</h3>
-      <img class="project-image" src="https://placehold.co/1000x75" />
-      <h3>Campaign to connect and meet people at FreightWaves F3</h3>
-      <img class="project-image" src="https://placehold.co/1000x75" />
-      <h3>Mini Newsletter series to keep our users informed</h3>
-      <img class="project-image" src="https://placehold.co/1000x75" />
-      <h3>Pitch decks for Customers, & Investors</h3>
-      <img class="project-image" src="https://placehold.co/1000x75" />
+      <div>
+        <h3>
+          Website Launch to capture new leads // In collaboration with <a
+            class="link-styling"
+            href="https://www.jessebutts.com/"
+            target="_blank"
+            style="font-weight:600;">Jesse Butts</a
+          >
+        </h3>
+        <img
+          class="project-image rounded-corners"
+          src="/curant_marketing-website.png"
+          alt="Curant's marketing landing page"
+        />
+      </div>
+      <div>
+        <h3>
+          Campaign to connect and meet people at FreightWaves F3 Future of
+          Freight Festival
+        </h3>
+        <img
+          class="project-image rounded-corners"
+          src="/curant_marketing-freightwaves.png"
+          alt="FreightWaves x Freightpay campaign webpage and LinkedIn posts"
+        />
+      </div>
+      <div>
+        <h3>
+          Mini Newsletter series to keep our existing users engaged & informed
+        </h3>
+        <img
+          class="project-image rounded-corners"
+          src="/curant_marketing-newsletters.png"
+          alt="Newsletter emails sent to Curant customers"
+        />
+      </div>
+      <div>
+        <h3>Pitch decks for Customers, & Investors</h3>
+        <img
+          class="project-image rounded-corners"
+          src="/curant_marketing-decks.png"
+          alt="Pitch deck slides"
+        />
+      </div>
     </div>
   </div>
 
@@ -81,12 +155,20 @@ const {} = Astro.props;
     <div class="section-header"><h2>cx & support</h2></div>
     <div class="section-wrapper">
       <div class="half">
-        <h3>Collaborative customer onboarding checklists</h3>
-        <img class="project-image" src="https://placehold.co/160x220/" />
+        <h3>Collaborative customer onboarding checklists on Trello</h3>
+        <img
+          class="project-image rounded-corners"
+          src="/curant_customer-onboarding.png"
+          alt="Screenshot of Trello Board for customer onboarding"
+        />
       </div>
       <div class="half">
-        <h3>Various documentation for new features</h3>
-        <img class="project-image" src="https://placehold.co/160x220/" />
+        <h3>Documentation & Support for new features</h3>
+        <img
+          class="project-image rounded-corners"
+          src="/curant_customer-support.png"
+          alt="Screenshot of documentation and support for customers"
+        />
       </div>
     </div>
   </div>
@@ -96,12 +178,20 @@ const {} = Astro.props;
     <div class="section-content">
       <div class="section-wrapper">
         <div class="half">
-          <h3>Launched a QA process to define release priorties</h3>
-          <img class="project-image" src="https://placehold.co/160x220/" />
+          <h3>Launched a temporary QA process to define release priorties</h3>
+          <img
+            class="project-image rounded-corners"
+            src="/curant_internal-qa.png"
+            alt="Screenshots of QA process"
+          />
         </div>
         <div class="half">
           <h3>Design Spikes leading to new features</h3>
-          <img class="project-image" src="https://placehold.co/160x220/" />
+          <img
+            class="project-image rounded-corners"
+            src="/curant_internal-spikes.png"
+            alt="Screenshot Design Spikes"
+          />
         </div>
       </div>
     </div>

@@ -10,7 +10,7 @@ import WidgetLibrary from "../components/WidgetLibrary.astro";
 import Contact from "../components/Contact.astro";
 ---
 
-<div id="section-wrapper">
+<div id="projects-wrapper">
   <div id="home" class="in-view">
     <Home />
   </div>
@@ -31,7 +31,7 @@ import Contact from "../components/Contact.astro";
   <style is:global>
     /* wrapper stylings  */
 
-    #section-wrapper {
+    #projects-wrapper {
       width: 100%;
       overflow: auto;
     }
@@ -88,7 +88,7 @@ import Contact from "../components/Contact.astro";
     .section-wrapper {
       display: flex;
       width: 100%;
-      gap: 48px;
+      gap: 40px;
       flex-wrap: wrap;
       @media only screen and (max-width: 660px) {
         gap: 20px;
@@ -110,7 +110,7 @@ import Contact from "../components/Contact.astro";
     }
 
     .half {
-      width: 45%;
+      width: 47%;
 
       @media only screen and (max-width: 1000px) {
         width: 100%;
@@ -126,7 +126,7 @@ import Contact from "../components/Contact.astro";
     }
 
     .forth {
-      width: 23%;
+      width: 25%;
 
       @media only screen and (max-width: 1000px) {
         width: 100%;
@@ -168,6 +168,9 @@ import Contact from "../components/Contact.astro";
 
     .border {
       border: 1px solid #efefef;
+    }
+
+    .rounded-corners {
       border-radius: 4px;
     }
 
@@ -177,10 +180,28 @@ import Contact from "../components/Contact.astro";
       border-width: 1px 8px;
       border-style: solid;
       border-color: transparent;
+
       &:hover {
         font-weight: 500;
         background-color: #dbeef7;
+        z-index: -999;
       }
+    }
+
+    .caption-wrapper {
+      display: flex;
+      align-items: center;
+      color: #959595;
+      flex-wrap: nowrap;
+    }
+
+    .caption {
+      margin: 4px 0;
+      color: #959595;
+    }
+
+    .icon {
+      width: 12px;
     }
   </style>
 </div>
