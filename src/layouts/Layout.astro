@@ -4,6 +4,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import Modal from "../components/Modal.astro";
 
 import "@fontsource-variable/dm-sans";
 ---
@@ -20,6 +21,7 @@ import "@fontsource-variable/dm-sans";
   </head>
   <body>
     <slot />
+    <Modal />
   </body>
 </html>
 <style is:global>
