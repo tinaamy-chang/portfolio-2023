@@ -1,0 +1,128 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon";
+---
+
+<Layout title="Tina Chang | Archive">
+  <div id="archive-wrapper">
+    <div id="archive-nav">
+      <a href="/"
+        ><Icon class="archive-icon" name="ic:sharp-arrow-back-ios" />
+        <Icon class="archive-icon" name="ph:house-fill" />
+        <p>Back to Main</p></a
+      >
+    </div>
+    <div id="archive-section-wrapper">
+      <h1>An Archive of Sorts</h1>
+      <div class="archive-section">
+        <h2 class="archive-title">Projects</h2>
+        <div class="archive-gallery">
+          <img
+            class="pop-image archive-image"
+            src="https://placehold.co/600x800"
+          /><img
+            class="pop-image archive-image"
+            src="https://placehold.co/600x800"
+          /><img
+            class="pop-image archive-image"
+            src="https://placehold.co/600x800"
+          /><img
+            class="pop-image archive-image"
+            src="https://placehold.co/600x800"
+          /><img
+            class="pop-image archive-image"
+            src="https://placehold.co/600x800"
+          /><img
+            class="pop-image archive-image"
+            src="https://placehold.co/600x800"
+          />
+        </div>
+      </div>
+      <div class="archive-section">
+        <h2 class="archive-title">Illustrations</h2>
+        <div class="archive-gallery">
+          <img
+            class="pop-image archive-image"
+            src="https://placehold.co/600x800"
+          /><img
+            class="pop-image archive-image"
+            src="https://placehold.co/600x800"
+          /><img
+            class="pop-image archive-image"
+            src="https://placehold.co/600x800"
+          /><img
+            class="pop-image archive-image"
+            src="https://placehold.co/600x800"
+          /><img
+            class="pop-image archive-image"
+            src="https://placehold.co/600x800"
+          /><img
+            class="pop-image archive-image"
+            src="https://placehold.co/600x800"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    #archive-nav a {
+      font-size: 1.5em;
+      display: inline-flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: flex-start;
+      text-decoration: none;
+      margin: -1px -4px;
+      border-width: 1px 4px;
+      border-style: solid;
+      border-color: transparent;
+
+      &:hover {
+        background-color: #dbeef7;
+      }
+    }
+
+    #archive-nav a p {
+      &:hover {
+        font-weight: 400;
+      }
+    }
+
+    .archive-icon {
+      width: 24px;
+    }
+
+    #archive-wrapper {
+      max-width: 1600px;
+      margin: auto;
+      background-color: lightblue;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    #archive-section-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+    }
+
+    .archive-title {
+      margin-bottom: 8px;
+    }
+
+    .archive-gallery {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    .archive-image {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+    }
+  </style>
+</Layout>
