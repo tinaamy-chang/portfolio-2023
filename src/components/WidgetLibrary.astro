@@ -7,7 +7,7 @@ const {} = Astro.props;
 <div class="project-wrapper">
   <div class="project-description">
     <div>
-      <h1>Widget Library</h1>
+      <h1>Bio-Rad's Widget Library</h1>
       <div>
         <p>
           <a class="link-styling" href="https://bio-rad.com" target="_blank"
@@ -245,23 +245,23 @@ const {} = Astro.props;
     </div>
     <div class="section-content">
       <div class="section-wrapper responsive-center">
-        <div class="widget-usage-wrapper">
+        <div class="third">
           <img
-            class="pop-image widget-usage border rounded-corners"
+            class="pop-image project-image border rounded-corners"
             src="/widgetlibrary/widget_usage1.png"
             alt="Email and where to paste"
           />
         </div>
-        <div class="widget-usage-wrapper">
+        <div class="third">
           <img
-            class="pop-image widget-usage border rounded-corners"
+            class="pop-image project-image border rounded-corners"
             src="/widgetlibrary/widget_usage2.png"
             alt="Widget when pasted"
           />
         </div>
-        <div class="widget-usage-wrapper">
+        <div class="third">
           <img
-            class="pop-image widget-usage border rounded-corners"
+            class="pop-image project-image border rounded-corners"
             src="/widgetlibrary/widget_usage3.png"
             alt="Widget in mobile mode"
           />
@@ -294,18 +294,6 @@ const {} = Astro.props;
       @media only screen and (max-width: 660px) {
         max-width: 100px;
       }
-    }
-
-    .widget-usage-wrapper {
-      width: 29%;
-      @media only screen and (max-width: 1000px) {
-        width: 90%;
-      }
-    }
-
-    .widget-usage {
-      width: 100%;
-      height: auto;
     }
   </style>
 </div>
