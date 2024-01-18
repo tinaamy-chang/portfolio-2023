@@ -45,7 +45,7 @@ const {} = Astro.props;
         <div class="half">
           <h3>
             Payments are being collected through highly inefficient ways such as
-            a paper form or bank routing numbers.
+            a paper form or transfers with bank routing numbers.
           </h3>
           <ul>
             <li>
@@ -53,7 +53,7 @@ const {} = Astro.props;
               acquire information
             </li>
             <li>
-              Hard to track; time is often wasted digging around for
+              Hard to track; time is often wasted digging around accounts for
               reconciliation
             </li>
             <li>
@@ -110,17 +110,13 @@ const {} = Astro.props;
           </h3>
           <ul>
             <li>
-              By using <a
-                class="link-styling"
-                href="https://dwolla.com"
-                target="_blank">Dwolla</a
-              > for ACH payments, we need to verify & create accounts for clients.
-              They require email, name, and business name.
+              By using Dwolla for ACH payments, we need to verify & create
+              accounts for clients. They require email, name, and business name.
             </li>
             <li>
               We can only control up to when the user selects a method to pay—
-              from there connecting a bank (Plaid) or using card (Stripe), we
-              will have to use their requirements for the UI/UX.
+              once the user is connecting a bank (Plaid) or entering card info
+              (Stripe), we have to use their requirements for the UI/UX.
             </li>
           </ul>
         </div>
@@ -189,7 +185,7 @@ const {} = Astro.props;
           />
         </div>
         <div class="fourth">
-          <h3>Where the feature in Payment Forms would go in the Roadmap</h3>
+          <h3>How did we add a possible feature to the Product Roadmap?</h3>
           <p>
             There was a good amount of exploration and feedback for what
             features we should add to the payment forms for our users after
@@ -254,6 +250,17 @@ const {} = Astro.props;
           Eventually, the goal was have customers adopt and integrate Curant's
           advanced features like invoicing clients or payments to vendors into
           their workflow.
+        </p>
+      </div>
+      <div class="text-wrapper">
+        <h3>
+          Customers were receiving payments from their Client much faster than
+          before
+        </h3>
+        <p>
+          By having a link to the form on their website, invoices, or email
+          signature, the ball was passed to the Client to make sure they submit
+          their payments on time as soon as they knew how much they owed.
         </p>
       </div>
       <div class="text-wrapper">
