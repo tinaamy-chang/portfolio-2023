@@ -10,7 +10,7 @@ const {} = Astro.props;
   <div class="nav-wrapper first-load show">
     <div class="nav-items-wrapper">
       <div class="nav-items">
-        <img class="nav-img" style="padding: 8px;" src="/profile-07.svg" />
+        <img class="nav-img" style="padding: 8px;" src="/profile.svg" />
       </div>
       <div class="nav-items">
         <p class="nav-title">Tina Chang <br />Product/UI/UX</p>
@@ -77,9 +77,10 @@ const {} = Astro.props;
     display: flex;
     flex-direction: column;
     overflow-x: auto;
-    position: sticky;
     height: 100vh;
-    max-width: 200px;
+    flex: 1;
+    min-width: 200px;
+    max-width: 240px;
     transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
     gap: 20px;
@@ -136,7 +137,7 @@ const {} = Astro.props;
 
   .nav-items {
     min-width: 200px;
-    padding: 4px 8px;
+    padding: 4px 12px;
   }
 
   .nav-anchor {
