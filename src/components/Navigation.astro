@@ -232,7 +232,6 @@ const {} = Astro.props;
       let newWindowWidth = win.innerWidth;
       if (newWindowWidth > oldWindowWidth && newWindowWidth < 600) {
       } else if (newWindowWidth < oldWindowWidth && newWindowWidth > 600) {
-        console.log("descreased");
         navwrapper?.classList.add("hide");
         navwrapper?.classList.remove("first-load");
         navwrapper?.classList.remove("show");

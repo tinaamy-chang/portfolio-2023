@@ -209,6 +209,9 @@ import { Icon } from "astro-icon";
         <p>Back to Main</p></a
       >
     </div>
+    <div id="background-fish-wrapper">
+      <img id="background-fish" src="/fish-circle.svg" />
+    </div>
   </div>
 
   <style>
@@ -355,4 +358,27 @@ import { Icon } from "astro-icon";
       }
     }
   </style>
+  <script>
+    const backgroundFish = document.getElementById(
+      "background-fish"
+    ) as HTMLImageElement;
+
+    let fish = {
+      rotation: 0,
+    };
+    let lastScrollTop = 0;
+
+    document.addEventListener("scroll", (event) => {
+      let st = window.pageYOffset || document.documentElement.scrollTop;
+      if (st > lastScrollTop) {
+        // downscroll code
+        fish.rotation -= 0.2;
+      } else {
+        // upscroll code
+        fish.rotation += 0.2;
+      }
+      lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+      backgroundFish.style.transform = "rotate(" + fish.rotation + "deg)";
+    });
+  </script>
 </Layout>

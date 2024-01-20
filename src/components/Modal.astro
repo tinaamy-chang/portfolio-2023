@@ -97,7 +97,6 @@ const {} = Astro.props;
       var img = images[i];
       // and attach our click listener for this image.
       img.addEventListener("click", function (evt: any) {
-        console.log(evt);
         modal.style.display = "block";
         modalImg.src = this.src;
         captionText.innerHTML = this.alt;
