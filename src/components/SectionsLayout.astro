@@ -32,24 +32,7 @@ import Contact from "../components/Contact.astro";
   </div>
 </div>
 
-    .project-layout {
 <style is:global>
-  #background-fish-wrapper {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 0;
-    right: -520px;
-    z-index: -999;
-    height: 100%;
-  }
-  #background-fish {
-    object-fit: contain;
-    height: 1100px;
-    opacity: 65%;
-    width: auto;
-  }
   /* wrapper stylings  */
 
   #projects-wrapper {
@@ -231,8 +214,6 @@ import Contact from "../components/Contact.astro";
   const projectsWrapper = document.getElementById(
     "projects-wrapper"
   ) as HTMLElement;
-
-  console.log(projectsWrapper);
 
   const backgroundFish = document.getElementById(
     "background-fish"
