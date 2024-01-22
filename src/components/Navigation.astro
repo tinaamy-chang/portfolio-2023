@@ -15,11 +15,13 @@ const {} = Astro.props;
       <div class="nav-items">
         <p class="nav-title">Tina Chang <br />Product/UI/UX</p>
       </div>
-      <div class="nav-items">
+      <div class="nav-items link-align">
         <a href="/TChang_Resume_2023.pdf" target="_blank" class="nav-link"
           ><Icon class="nav-icon" name="uiw:file-text" />
           <p class="nav-text">&nbsp;Resume</p></a
-        > // <a
+        >
+        <p>//</p>
+        <a
           href="https://www.linkedin.com/in/tinastunas/"
           class="nav-link"
           target="_blank"
@@ -79,11 +81,11 @@ const {} = Astro.props;
     overflow-x: auto;
     height: 100vh;
     flex: 1;
-    min-width: 200px;
-    max-width: 240px;
+    min-width: 240px;
+    max-width: 280px;
     transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
-    gap: 20px;
+    gap: 24px;
   }
 
   .show {
@@ -137,13 +139,13 @@ const {} = Astro.props;
 
   .nav-items {
     min-width: 200px;
-    padding: 4px 12px;
+    padding: 4px 24px;
   }
 
   .nav-anchor {
     text-decoration: none;
     &:hover {
-      font-weight: 500;
+      font-weight: 400;
       background-color: #dbeef7;
     }
   }
@@ -152,7 +154,6 @@ const {} = Astro.props;
     background-color: #dbeef7;
     font-weight: 400;
     &:hover {
-      font-weight: 500;
       background-color: #c8dfea;
     }
   }
@@ -162,6 +163,8 @@ const {} = Astro.props;
   }
 
   .nav-title {
+    font-family: "freight-macro-pro", system-ui, sans-serif;
+
     font-size: 1.6em;
     font-weight: 500;
   }
@@ -177,7 +180,6 @@ const {} = Astro.props;
     border-style: solid;
     border-color: transparent;
     &:hover {
-      font-weight: 400;
       background-color: #dbeef7;
     }
   }
@@ -188,6 +190,13 @@ const {} = Astro.props;
     &:hover {
       font-weight: 400;
     }
+  }
+
+  .link-align {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: flex-end;
   }
 </style>
 

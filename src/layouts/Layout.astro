@@ -6,7 +6,7 @@ interface Props {
 const { title } = Astro.props;
 import Modal from "../components/Modal.astro";
 
-import "@fontsource-variable/dm-sans";
+// import "@fontsource-variable/dm-sans";
 ---
 
 <!doctype html>
@@ -15,6 +15,8 @@ import "@fontsource-variable/dm-sans";
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://use.typekit.net/xzh5jfm.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/xzh5jfm.css" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
@@ -27,16 +29,17 @@ import "@fontsource-variable/dm-sans";
 <style is:global>
   * {
     box-sizing: border-box;
-    font-family: "DM Sans Variable", system-ui, sans-serif;
+    font-family: "nimbus-sans", system-ui, sans-serif;
     font-weight: 300;
     padding: 0;
     margin: 0;
     font-size: 1em;
     scroll-behavior: smooth;
+    letter-spacing: 0.4px;
   }
   :root {
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: 16px;
   }
   html {
     background: #fff;
@@ -46,8 +49,10 @@ import "@fontsource-variable/dm-sans";
   }
 
   h1 {
+    font-family: "freight-macro-pro", system-ui, sans-serif;
     font-weight: 400;
     font-size: 2.5em;
+    margin-bottom: 8px;
   }
 
   h2 {
@@ -56,7 +61,7 @@ import "@fontsource-variable/dm-sans";
   }
 
   h3 {
-    font-weight: 550;
+    font-weight: 500;
     font-size: 1em;
     margin-bottom: 12px;
   }
@@ -72,6 +77,9 @@ import "@fontsource-variable/dm-sans";
     list-style-position: inside;
     list-style-type: circle;
     padding-left: 8px;
+  }
+  li {
+    padding-bottom: 4px;
   }
 
   ol {
