@@ -89,12 +89,20 @@ const {} = Astro.props;
     transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
     gap: 24px;
+    z-index: 999;
+    background-color: #fff;
+    @media only screen and (max-width: 800px) {
+      min-width: calc(100vw - 24px);
+    }
   }
 
   .show {
     min-width: 240px;
     transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
+    @media only screen and (max-width: 800px) {
+      min-width: calc(100vw - 24px);
+    }
   }
 
   .first-load {
@@ -112,7 +120,7 @@ const {} = Astro.props;
   }
 
   .nav-collapse {
-    min-width: 24px;
+    min-width: 36px;
     background-color: #dbeef7;
     height: 100vh;
     position: sticky;
@@ -120,6 +128,11 @@ const {} = Astro.props;
     top: 0;
     text-align: center;
     transition: background-color 0.25s ease-in-out;
+    z-index: = 900;
+
+    @media only screen and (max-width: 750px) {
+      width: 28px;
+    }
 
     &:hover {
       background-color: #c8dfea;

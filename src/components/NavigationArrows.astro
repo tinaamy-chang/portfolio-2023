@@ -24,18 +24,16 @@ const {} = Astro.props;
 
 <style>
   .nav-arrow-wrapper {
-    position: absolute;
-    top: 0;
     padding: 80px 2px;
-    right: 32px;
     height: 100%;
+    width: 36px;
     background-color: #dbeef780;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
-
-    @media screen and (max-height: 360px) {
-      padding: 20px 2px;
+    @media only screen and (max-width: 750px) {
+      width: 28px;
     }
   }
   .nav-arrow {
