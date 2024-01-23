@@ -8,67 +8,69 @@ const {} = Astro.props;
 
 <>
   <div class="nav-wrapper first-load show">
-    <div class="nav-items-wrapper">
-      <div class="nav-items">
-        <img class="nav-img" style="padding: 8px;" src="/profile.svg" />
+    <div class="full-vh">
+      <div class="nav-items-wrapper">
+        <div class="nav-items">
+          <img class="nav-img" style="padding: 8px;" src="/profile.svg" />
+        </div>
+        <div class="nav-items">
+          <p class="nav-title">Tina Chang <br />Product/UI/UX</p>
+        </div>
+        <div class="nav-items link-align">
+          <a
+            href="/TChang_Resume_2023.pdf"
+            target="_blank"
+            class="nav-link no-break"
+            ><Icon class="nav-icon" name="uiw:file-text" />
+            <p class="nav-text">&nbsp;Resume</p></a
+          >
+          <p>//</p>
+          <a
+            href="https://www.linkedin.com/in/tinastunas/"
+            class="nav-link no-break"
+            target="_blank"
+            ><Icon class="nav-icon" name="uiw:linkedin" />
+            <p class="nav-text">&nbsp;LinkedIn</p></a
+          >
+        </div>
+        <div class="nav-items">
+          <a
+            class="nav-link"
+            href="https://github.com/tinaamy-chang/portfolio-2023"
+            target="_blank"
+            ><p class="nav-text">
+              This website was coded using Astro. Check out my code!
+            </p>
+            <Icon class="nav-icon" name="majesticons:external-link-line" /></a
+          >
+        </div>
       </div>
-      <div class="nav-items">
-        <p class="nav-title">Tina Chang <br />Product/UI/UX</p>
-      </div>
-      <div class="nav-items link-align">
+      <div class="nav-items-wrapper">
         <a
-          href="/TChang_Resume_2023.pdf"
-          target="_blank"
-          class="nav-link no-break"
-          ><Icon class="nav-icon" name="uiw:file-text" />
-          <p class="nav-text">&nbsp;Resume</p></a
+          id="nav-item-home"
+          href="#home"
+          class="nav-items nav-anchor active-item">Home</a
         >
-        <p>//</p>
         <a
-          href="https://www.linkedin.com/in/tinastunas/"
-          class="nav-link no-break"
-          target="_blank"
-          ><Icon class="nav-icon" name="uiw:linkedin" />
-          <p class="nav-text">&nbsp;LinkedIn</p></a
+          id="nav-item-productatcurant"
+          href="#productatcurant"
+          class="nav-items nav-anchor">Product/UI/UX @ Curant</a
+        >
+        <a
+          id="nav-item-paymentforms"
+          href="#paymentforms"
+          class="nav-items nav-anchor">Curant's Payment Forms</a
+        >
+        <a
+          id="nav-item-widgetlibrary"
+          href="#widgetlibrary"
+          class="nav-items nav-anchor">Bio-Rad's Widget Library</a
+        >
+        <!-- <a id="nav-item-cats" href="#cats" class="nav-items nav-anchor">Cats</a> -->
+        <a id="nav-item-contact" href="#contact" class="nav-items nav-anchor"
+          >Contact</a
         >
       </div>
-      <div class="nav-items">
-        <a
-          class="nav-link"
-          href="https://github.com/tinaamy-chang/portfolio-2023"
-          target="_blank"
-          ><p class="nav-text">
-            This website was coded using Astro. Check out my code!
-          </p>
-          <Icon class="nav-icon" name="majesticons:external-link-line" /></a
-        >
-      </div>
-    </div>
-    <div class="nav-items-wrapper">
-      <a
-        id="nav-item-home"
-        href="#home"
-        class="nav-items nav-anchor active-item">Home</a
-      >
-      <a
-        id="nav-item-productatcurant"
-        href="#productatcurant"
-        class="nav-items nav-anchor">Product/UI/UX @ Curant</a
-      >
-      <a
-        id="nav-item-paymentforms"
-        href="#paymentforms"
-        class="nav-items nav-anchor">Curant's Payment Forms</a
-      >
-      <a
-        id="nav-item-widgetlibrary"
-        href="#widgetlibrary"
-        class="nav-items nav-anchor">Bio-Rad's Widget Library</a
-      >
-      <!-- <a id="nav-item-cats" href="#cats" class="nav-items nav-anchor">Cats</a> -->
-      <a id="nav-item-contact" href="#contact" class="nav-items nav-anchor"
-        >Contact</a
-      >
     </div>
   </div>
   <div class="nav-collapse">«</div>
@@ -147,6 +149,14 @@ const {} = Astro.props;
   .nav-wrapper::after {
     content: "";
     margin: auto;
+  }
+
+  .full-vh {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 400px;
   }
 
   .nav-items-wrapper {
