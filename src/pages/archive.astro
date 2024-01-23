@@ -292,10 +292,14 @@ import { Icon } from "astro-icon";
     .archive-image {
       width: 30%;
       height: 150px;
+      @media only screen and (max-width: 800px) {
+        width: 27%;
+        height: 100px;
+      }
     }
 
     .archive-image-top {
-      object-position: 2% 2%;
+      object-position: 50% 2%;
       object-fit: cover;
     }
 

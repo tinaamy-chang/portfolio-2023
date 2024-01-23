@@ -16,14 +16,17 @@ const {} = Astro.props;
         <p class="nav-title">Tina Chang <br />Product/UI/UX</p>
       </div>
       <div class="nav-items link-align">
-        <a href="/TChang_Resume_2023.pdf" target="_blank" class="nav-link"
+        <a
+          href="/TChang_Resume_2023.pdf"
+          target="_blank"
+          class="nav-link no-break"
           ><Icon class="nav-icon" name="uiw:file-text" />
           <p class="nav-text">&nbsp;Resume</p></a
         >
         <p>//</p>
         <a
           href="https://www.linkedin.com/in/tinastunas/"
-          class="nav-link"
+          class="nav-link no-break"
           target="_blank"
           ><Icon class="nav-icon" name="uiw:linkedin" />
           <p class="nav-text">&nbsp;LinkedIn</p></a
@@ -89,7 +92,7 @@ const {} = Astro.props;
   }
 
   .show {
-    min-width: 200px;
+    min-width: 240px;
     transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
   }

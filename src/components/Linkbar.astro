@@ -9,37 +9,37 @@ const { ishomesection } = Astro.props;
 ---
 
 <div class="about-info">
-  <a href="/archive" class="nav-link"
+  <a href="/archive" class="nav-link no-break"
     ><Icon class="nav-icon" name="bi:archive-fill" />
     <p class="nav-text">Archive</p></a
   > //
-  <a href="/TChang_Resume_2024.pdf" target="_blank" class="nav-link"
+  <a href="/TChang_Resume_2024.pdf" target="_blank" class="nav-link no-break"
     ><Icon class="nav-icon" name="uiw:file-text" />
     <p class="nav-text">Resume</p></a
   > //
   <a
     href="https://www.linkedin.com/in/tinastunas/"
-    class="nav-link"
+    class="nav-link no-break"
     target="_blank"
     ><Icon class="nav-icon" name="uiw:linkedin" />
     <p class="nav-text">LinkedIn</p></a
   >
   // <a
     href="https://github.com/tinaamy-chang/portfolio-2023"
-    class="nav-link"
+    class="nav-link no-break"
     target="_blank"
     ><Icon class="nav-icon" name="uiw:github" />
     <p class="nav-text">Github</p></a
   > // {
     ishomesection ? (
-      <a href="#productatcurant" class="nav-link">
+      <a href="#productatcurant" class="nav-link no-break">
         <>
           <p class="nav-text">Featured Projects&nbsp;</p>
           <Icon class="nav-icon" name="uiw:down" />
         </>
       </a>
     ) : (
-      <a href="#home" class="nav-link">
+      <a href="#home" class="nav-link no-break">
         <>
           <p class="nav-text">Back to Top&nbsp;</p>
           <Icon class="nav-icon" name="uiw:up" />
